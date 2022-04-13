@@ -25,7 +25,7 @@ $.getJSON("data/data.json").done(function (data) {
         titles += ' — ' + title_object["location"]
         titles += '</span>'
         titles += '</small>'
-        titles += '<div class="xp-date">' + start_date_string + ' – ' + end_date_string + '</div>'
+        titles += '<div class="xp-date">' + start_date_string.toUpperCase() + ' – ' + end_date_string.toUpperCase() + '</div>'
       });
       $.each(experience_object["responsibilities"], function (responsibility_index, responsibility_desc) {
         responsibilities += '<li>' + responsibility_desc + '</li>'
@@ -41,7 +41,7 @@ $.getJSON("data/data.json").done(function (data) {
     });
     work_experiences += '<div class="xp-item">'
     work_experiences += '<div class="xp-company">'
-    work_experiences += work_experience_object["company"]
+    work_experiences += '<b>' + work_experience_object["company"] + '</b>'
     work_experiences += '</div>'
     work_experiences += experiences
     work_experiences += '</div>'
@@ -66,7 +66,7 @@ $.getJSON("data/data.json").done(function (data) {
         studies += ' — ' + study_object["location"]
         studies += '</span>'
         studies += '</small>'
-        studies += '<div class="xp-date">' + start_date_string + ' – ' + end_date_string + '</div>'
+        studies += '<div class="xp-date">' + start_date_string.toUpperCase() + ' – ' + end_date_string.toUpperCase() + '</div>'
       });
       $.each(education_object["responsibilities"], function (responsibility_index, responsibility_desc) {
         responsibilities += '<li>' + responsibility_desc + '</li>'
@@ -89,7 +89,7 @@ $.getJSON("data/data.json").done(function (data) {
     skills += skill_name
     skills += '<br />'
     skills += "<small>"
-    skills += skill_object["sub_skills"].join(" · ")
+    skills += skill_object["sub_skills"].join(" · ").toUpperCase()
     skills += '</small>'
     skills += '</div>'
     // skills += '<div class="extra-details">'
