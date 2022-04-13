@@ -1,0 +1,249 @@
+{
+  "page": "SKR's portfolio",
+  "name": "Sumit Kumar Rai",
+  "about": "Data Engineer with 7+ years of experience in building an enterprise data warehouse, automating workflows, tackling challenging architectural and scalability problems. Currently working with CloudFactory for 3+ years to provide an on-demand, human powered data processing workforce for scaling critical business processes in the cloud with quality work.",
+  "work-experiences": [
+    {
+      "company": "CloudFactory",
+      "experiences": [
+        {
+          "titles": [
+            {
+              "title_name": "Data Engineer",
+              "start": "2020-12-01",
+              "end": null,
+              "location": "Kathmandu, Nepal"
+            }
+          ],
+          "responsibilities": [
+            "Data modeling with Kimball approach.",
+            "Data transformation, documentation, and testing  with dbt tool. Along that creating seeds, snapshots, macros, and exposures.",
+            "Enforced documentation and testing in the team to achieve 80% above.",
+            "Introduced SQLfluff and automated strict implementation of linting our SQL queries in the dbt models.",
+            "Build a CI pipeline from scratch in GitHub actions.",
+            "Manage ELT connections in SaaS services such as Fivetran and Stitch.",
+            "Write tasks and flows in the Prefect orchestration tool.",
+            "Write and manage the SnowFlake objects: databases(catalogs), schemas, tables, views, stages, snowpipes, masks, and tasks.",
+            "Create and manage the users, roles, and grants in the SnowFlake enterprise data warehouse."
+          ]
+        },
+        {
+          "titles": [
+            {
+              "title_name": "Software Developer (DevOps)",
+              "start": "2018-12-31",
+              "end": "2020-11-30",
+              "location": "Kathmandu, Nepal"
+            },
+            {
+              "title_name": "Associate DevOps Engineer",
+              "start": "2018-10-01",
+              "end": "2018-11-30",
+              "location": "Kathmandu, Nepal"
+            }
+          ],
+          "responsibilities": [
+            "Troubleshoot and resolve issues in dev, test and production environments among many apps to support the ongoing platform development.",
+            "Monitoring the operation of the applications and also enhancing its performance.",
+            "Work collaboratively with software engineering teams to meet the Scrum sprint goals.",
+            "Write optimized SQL queries to process big data and get ultimate results to make proper business decisions.",
+            "Help automate and streamline the operations and processes as well as build and maintain tools for deployment, monitoring and operations.",
+            "Update and upgrade legacy infrastructure in order to avoid business operations."
+          ]
+        },
+        {
+          "titles": [
+            {
+              "title_name": "Data Science Intern",
+              "start": "2020-11-01",
+              "end": "2020-12-31",
+              "location": "Kathmandu, Nepal"
+            }
+          ],
+          "responsibilities": [
+            "Troubleshoot and resolve issues in dev, test and production environments among many apps to support the ongoing platform development.",
+            "Monitoring the operation of the applications and also enhancing its performance.",
+            "Work collaboratively with software engineering teams to meet the Scrum sprint goals.",
+            "Write optimized SQL queries to process big data and get ultimate results to make proper business decisions.",
+            "Help automate and streamline the operations and processes as well as build and maintain tools for deployment, monitoring and operations.",
+            "Update and upgrade legacy infrastructure in order to avoid business operations."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Islington College",
+      "experiences": [
+        {
+          "titles": [
+            {
+              "title_name": "External Supervisor",
+              "start": "2019-07-01",
+              "end": null,
+              "location": "Kathmandu, Nepal"
+            }
+          ],
+          "responsibilities": [
+            "Guide the students studying Bachelors to complete their Final Year Project (FYP) on time.",
+            "Mentor the students and assist them when help is required.",
+            "Focus them to project aims and objectives and sync when required.",
+            "Finally mark their project works and their presentation in their viva."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Leapfrog Technology",
+      "experiences": [
+        {
+          "titles": [
+            {
+              "title_name": "Software Engineer, DevOps",
+              "start": "2017-12-01",
+              "end": "2018-09-30",
+              "location": "Kathmandu, Nepal"
+            },
+            {
+              "title_name": "Associate DevOps Engineer, System Administrator",
+              "start": "2016-09-01",
+              "end": "2017-12-31",
+              "location": "Kathmandu, Nepal"
+            }
+          ],
+          "responsibilities": [
+            "Engineer, implement and monitor security measures for the protection of computer systems, networks and information.",
+            "Design and structure the Amazon Web Services (AWS) resources with Auto Scaling and Elastic Load Balancers via CloudFormation; configure and troubleshoot them as well.",
+            "Construct the automated deployment via Jenkins pipeline and Ansible scripts.",
+            "Setup firewall after installing pfSense in a server for the Intranet; configured traffic shaping, VPN (OpenVPN), IPS (Snort), web filter (Squid) and more.",
+            "Monitoring, scaling, security, backup and maintenance of all applications and deployment environments, and infrastructure in AWS Cloud under supervision.",
+            "Setup identity managers both FreeIPA and Active Directory to centralize the identities of the employees.",
+            "Responsible for looking after DNS records and SSL certificates for the clients’ account and as well as of the company’s.",
+            "Govern the firewall, bandwidth policies for suitable working environments.",
+            "Continuous research and learning; discover, evaluate and implement changes to maximize software development efficiency."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Incessant Rain Animation Studios",
+      "experiences": [
+        {
+          "titles": [
+            {
+              "title_name": "Software Developer",
+              "start": "2014-12-01",
+              "end": "2016-09-30",
+              "location": "Kathmandu, Nepal"
+            }
+          ],
+          "responsibilities": [
+            "A pipeline built in Python to manage and share the work among the employees. The pipeline helped them automatically manage and fetch animation and graphical files without hassle.",
+            "Researched render batch commands and co-operated with the .NET programmer team to build an automated render job handler.",
+            "Implemented remote services manager tool to ease the jobs for renderers."
+          ]
+        }
+      ]
+    }
+  ],
+  "academic-qualifications": [
+    {
+      "institution": "London Metropolitan University",
+      "educations": [
+        {
+          "studies": [
+            {
+              "study_name": "Masters of Science in IT & Applied Security",
+              "start": "2018-12-31",
+              "end": "2020-11-30",
+              "location": "London, UK"
+            },
+            {
+              "study_name": "Bachelors of Science (Hons) in Computer Networking and IT Security",
+              "start": "2018-10-01",
+              "end": "2018-11-30",
+              "location": "London, UK"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "institution": "Informatics Academy",
+      "educations": [
+        {
+          "studies": [
+            {
+              "study_name": "International Diploma in Information and Communication Technology",
+              "start": "2020-11-01",
+              "end": "2020-12-31",
+              "location": "Victoria Street, Singapore"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "skills": {
+    "Data": {
+      "confidence": 100,
+      "sub_skills": [
+        "DBT",
+        "Kimball",
+        "SnowFlake",
+        "Fivetran",
+        "Prefect",
+        "Meltano",
+        "Pipelinewise",
+        "Stitch",
+        "Snowpipe",
+        "SQL",
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB"
+      ]
+    },
+    "AWS": {
+      "confidence": 100,
+      "sub_skills": [
+        "EC2",
+        "RDS",
+        "S3",
+        "ECS",
+        "ECR",
+        "VPC",
+        "Route53",
+        "Lambda",
+        "IAM",
+        "ACM",
+        "CloudWatch",
+        "EFS",
+        "Athena",
+        "AutoScaling"
+      ]
+    },
+    "DevOps": {
+      "confidence": 100,
+      "sub_skills": [
+        "Linux",
+        "SSH",
+        "Docker",
+        "Ansible",
+        "Terraform",
+        "Jenkins",
+        "Github",
+        "Github Actions",
+        "CI/CD",
+        "Kubernetes"
+      ]
+    },
+    "Networking": {
+      "confidence": 100,
+      "sub_skills": ["IPv4", "IPv4 Subnetting", "DHCP"]
+    },
+    "Programming": {
+      "confidence": 100,
+      "sub_skills": ["Python", "REST API"]
+    },
+    "Agile": { "confidence": 100, "sub_skills": ["Jira", "Scrum", "Kanban"] }
+  }
+}
