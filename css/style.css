@@ -60,11 +60,11 @@ article .resume__section {
 }
 
 article header {
-  padding: 6em 4em 0;
+  padding: 4em 4em 0;
 }
 
 article .resume__section {
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 }
 
 article .resume__section:last-child {
@@ -74,7 +74,7 @@ article .resume__section:last-child {
 article .resume__section-title {
   display: flex;
   align-items: center;
-  margin-bottom: 1.43em;
+  margin-bottom: 1em;
 }
 
 article .resume__section-title>i {
@@ -132,7 +132,7 @@ article .info-label i {
 }
 
 article .items {
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 }
 
 article .items:last-child {
@@ -156,8 +156,7 @@ article h3 strong {
 
 article .highlight {
   font-size: 0.9em;
-  margin-top: 0.3em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   color: #e91d63;
 }
 
