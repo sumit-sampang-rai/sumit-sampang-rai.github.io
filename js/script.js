@@ -71,7 +71,7 @@ $.getJSON("data/data.json").done(function (data) {
       $.each(education_object["responsibilities"], function (responsibility_index, responsibility_desc) {
         responsibilities += '<li>' + responsibility_desc + '</li>'
       });
-      educations += '<div class="xp-job">'
+      educations += '<div class="xp-education">'
       educations += studies
       educations += '</div>'
     });
@@ -101,7 +101,7 @@ $.getJSON("data/data.json").done(function (data) {
 
   $("title").append(data["page"]);
   $("#my_name").append(data["name"]);
-  $("#about-me p").append(data["about"]);
+  $("#about-me").append(data["about"]);
   $("#work_experiences").append(work_experiences);
   $("#academic_qualifications").append(academic_qualifications);
   $("#skills").append(skills);
