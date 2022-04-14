@@ -1,4 +1,9 @@
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const today_date = new Date();
+
+function date_to_string(date) {
+  return ((date.getTime() === today_date.getTime()) ? 'Present' : months[date.getMonth()] + ' ' + date.getFullYear().toString());
+}
 
 function calc_months(start, end) {
   var months = (end.getFullYear() - start.getFullYear()) * 12;
@@ -18,10 +23,46 @@ function months_readable(months, plus = false) {
 }
 
 $.getJSON("data/data.json").done(function (data) {
+  var heading = '';
   var work_experiences = '';
   var academic_qualifications = '';
+  var recognitions = '';
   var skills = '';
   var all_experience_months = 0;
+
+  // heading
+  // title
+  heading += '<span id="my_name">' + data["name"] + '</span>'
+
+  // location
+  heading += '<div class="info-item">'
+  heading += '<span class="info-label"><i class="fa fa-location-arrow"></i></span>'
+  heading += '<span class="info-text">' + data["location"] + '</span>'
+  heading += '</div>'
+
+  // linkedin
+  heading += '<div class="info-item">'
+  heading += '<span class="info-label"><i class="fab fa-linkedin"></i></span>'
+  heading += '<span class="info-text"><a href="' + data["linkedin"]["url"] + '" target="_blank">' + data["linkedin"]["text"] + '</a></span>'
+  heading += '</div>'
+
+  // website
+  heading += '<div class="info-item">'
+  heading += '<span class="info-label"><i class="fa fa-globe"></i></span>'
+  heading += '<span class="info-text"><a href="' + data["website"]["url"] + '" target="_blank">' + data["website"]["text"] + '</a></span>'
+  heading += '</div>'
+
+  // email
+  heading += '<div class="info-item" hidden>'
+  heading += '<span class="info-label"><i class="fa fa-envelope"></i></span>'
+  heading += '<span class="info-text">@gmail.com</span>'
+  heading += '</div>'
+
+  // phone
+  heading += '<div class="info-item" hidden>'
+  heading += '<span class="info-label"><i class="fa fa-phone"></i></span>'
+  heading += '<span class="info-text">+977-98</span>'
+  heading += '</div>'
 
   $.each(data["work-experiences"], function (work_experience_index, work_experience_object) {
     var experiences = '';
@@ -31,16 +72,10 @@ $.getJSON("data/data.json").done(function (data) {
       var responsibilities = '';
       var titles = '';
       $.each(experience_object["titles"], function (title_index, title_object) {
-        var today_date = new Date()
         var end_date = new Date();
         var start_date = new Date(title_object["start"]);
-
         end_date = (title_object["end"] === null ? end_date : new Date(title_object["end"]));
-
         var months_count = calc_months(start_date, end_date);
-
-        var start_date_string = months[start_date.getMonth()] + ' ' + start_date.getFullYear().toString();
-        var end_date_string = ((end_date.getTime() === today_date.getTime()) ? 'Present' : months[end_date.getMonth()] + ' ' + end_date.getFullYear().toString());
 
         company_experience_months += months_count;
 
@@ -50,7 +85,7 @@ $.getJSON("data/data.json").done(function (data) {
 
         titles += '<h3><strong>' + title_object["title_name"] + '</strong> — ' + title_object["location"] + '</h3>'
         titles += '<div class="highlight">'
-        titles += start_date_string.toUpperCase() + ' – ' + end_date_string.toUpperCase()
+        titles += date_to_string(start_date).toUpperCase() + ' – ' + date_to_string(end_date).toUpperCase()
         titles += ' (' + months_readable(months_count) + ')'
         titles += '</div>'
       });
@@ -63,7 +98,7 @@ $.getJSON("data/data.json").done(function (data) {
       experiences += '</div>'
     });
     work_experiences += '<div class="items">'
-    work_experiences += '<h2>' + work_experience_object["company"] + ' (' + months_readable(company_experience_months) + ')' + '</h2>'
+    work_experiences += '<h2>' + work_experience_object["entity"] + ' (' + months_readable(company_experience_months) + ')' + '</h2>'
     work_experiences += experiences
     work_experiences += '</div>'
   });
@@ -76,21 +111,16 @@ $.getJSON("data/data.json").done(function (data) {
     $.each(academic_qualification_object["educations"], function (education_index, education_object) {
       var studies = '';
       $.each(education_object["studies"], function (study_index, study_object) {
-        var today_date = new Date()
         var end_date = new Date();
         var start_date = new Date(study_object["start"]);
         end_date = (study_object["end"] === null ? end_date : new Date(study_object["end"]));
-
         var months_count = calc_months(start_date, end_date);
-
-        var start_date_string = months[start_date.getMonth()] + ' ' + start_date.getFullYear().toString();
-        var end_date_string = ((end_date.getTime() === today_date.getTime()) ? 'Present' : months[end_date.getMonth()] + ' ' + end_date.getFullYear().toString());
 
         institution_education_months += months_count;
 
         studies += '<h3><strong>' + study_object["study_name"] + '</strong> — ' + study_object["location"] + '</h3>'
         studies += '<div class="highlight">'
-        studies += start_date_string.toUpperCase() + ' – ' + end_date_string.toUpperCase()
+        studies += date_to_string(start_date).toUpperCase() + ' – ' + date_to_string(end_date).toUpperCase()
         studies += ' (' + months_readable(months_count) + ')'
         studies += '</div>'
       });
@@ -100,9 +130,26 @@ $.getJSON("data/data.json").done(function (data) {
       educations += studies
     });
     academic_qualifications += '<div class="items">'
-    academic_qualifications += '<h2>' + academic_qualification_object["institution"] + '</h2>'
+    academic_qualifications += '<h2>' + academic_qualification_object["entity"] + '</h2>'
     academic_qualifications += educations
     academic_qualifications += '</div>'
+  });
+
+  $.each(data["recognitions"], function (recognition_index, recognition_object) {
+    $.each(recognition_object["awards"], function (award_index, award_object) {
+      var start_date = new Date(award_object["start"]);
+      var start_date_string = months[start_date.getMonth()] + ' ' + start_date.getFullYear().toString();
+
+      recognitions += '<div class="items">'
+      recognitions += '<h3><strong>' + award_object["award_name"] + '</strong> — ' + recognition_object["entity"] + '</h3>'
+      recognitions += '<div class="highlight">'
+      recognitions += start_date_string.toUpperCase()
+      recognitions += '</div>'
+      recognitions += '<div class="details">'
+      recognitions += award_object["description"]
+      recognitions += '</div>'
+      recognitions += '</div>'
+    });
   });
 
   $.each(data["skills"], function (skill_name, skill_object) {
@@ -117,9 +164,10 @@ $.getJSON("data/data.json").done(function (data) {
   });
 
   $("title").append(data["page"]);
-  $("#my_name").append(data["name"]);
+  $("#heading").append(heading);
   $("#about-me").append(data["about"]);
   $("#work_experiences").append(work_experiences);
   $("#academic_qualifications").append(academic_qualifications);
   $("#skills").append(skills);
+  $("#recognitions").append(recognitions);
 });
