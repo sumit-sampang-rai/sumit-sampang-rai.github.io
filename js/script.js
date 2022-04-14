@@ -2,6 +2,9 @@ const months = ["January", "February", "March", "April", "May", "June", "July", 
 const today_date = new Date();
 
 function date_to_string(date) {
+  console.log(date, date.getTime());
+  console.log(date, today_date.getTime());
+  console.log(date.getTime() === today_date.getTime());
   return ((date.getTime() === today_date.getTime()) ? 'Present' : months[date.getMonth()] + ' ' + date.getFullYear().toString());
 }
 
@@ -72,7 +75,7 @@ $.getJSON("data/data.json").done(function (data) {
       var responsibilities = '';
       var titles = '';
       $.each(experience_object["titles"], function (title_index, title_object) {
-        var end_date = new Date();
+        var end_date = today_date;
         var start_date = new Date(title_object["start"]);
         end_date = (title_object["end"] === null ? end_date : new Date(title_object["end"]));
         var months_count = calc_months(start_date, end_date);
@@ -111,7 +114,7 @@ $.getJSON("data/data.json").done(function (data) {
     $.each(academic_qualification_object["educations"], function (education_index, education_object) {
       var studies = '';
       $.each(education_object["studies"], function (study_index, study_object) {
-        var end_date = new Date();
+        var end_date = today_date;
         var start_date = new Date(study_object["start"]);
         end_date = (study_object["end"] === null ? end_date : new Date(study_object["end"]));
         var months_count = calc_months(start_date, end_date);
