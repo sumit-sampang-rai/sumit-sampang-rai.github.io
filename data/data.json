@@ -252,7 +252,7 @@
     },
     "Programming": {
       "confidence": 100,
-      "sub_skills": ["Python", "REST API"]
+      "sub_skills": ["Python", "OOP", "MVC", "REST API"]
     },
     "Agile": { "confidence": 100, "sub_skills": ["Jira", "Scrum", "Kanban"] }
   },
