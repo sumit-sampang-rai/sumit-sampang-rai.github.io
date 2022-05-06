@@ -12,6 +12,7 @@ function calc_months(start, end) {
   var months = (end.getFullYear() - start.getFullYear()) * 12;
   months -= start.getMonth();
   months += end.getMonth();
+  months += start.getDate() < end.getDate() ? 1 : 0
   return months;
 }
 
