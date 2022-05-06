@@ -16,7 +16,7 @@ function calc_months(start, end) {
 }
 
 function months_readable(months, plus = false) {
-  var exp_years = Math.ceil(months / 12);
+  var exp_years = Math.floor(months / 12);
   var exp_months = months % 12;
   return ((exp_years == 0) ? '' : exp_years + ((exp_years == 1) ? ' year ' : ' years')) +
     (
