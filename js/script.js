@@ -11,7 +11,7 @@ function date_to_string(date) {
 function calc_months(start, end) {
   var months = (end.getFullYear() - start.getFullYear()) * 12;
   months -= start.getMonth();
-  months += end.getMonth() + 1;
+  months += end.getMonth();
   return months;
 }
 
