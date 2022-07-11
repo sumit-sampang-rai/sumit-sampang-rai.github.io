@@ -10,7 +10,7 @@
     "text": "sumit-sampang-rai.github.io",
     "url": "https://sumit-sampang-rai.github.io/"
   },
-  "about": "Data Engineer with 7+ years of experience in building an enterprise data warehouse, automating workflows, tackling challenging architectural and scalability problems. Currently working with CloudFactory for 3+ years to provide an on-demand, human powered data processing workforce for scaling critical business processes in the cloud with quality work.",
+  "about": "Senior Data Engineer with 7+ years of experience in building an enterprise data warehouse, automating workflows, tackling challenging architectural and scalability problems. Currently working with CloudFactory for 3+ years to provide an on-demand, human powered data processing workforce for scaling critical business processes in the cloud with quality work.",
   "work-experiences": [
     {
       "entity": "CloudFactory",
@@ -20,8 +20,14 @@
           "titles": [
             {
               "title_name": "Data Engineer",
-              "start": "2020-12-01",
+              "start": "2022-07-01",
               "end": null,
+              "location": "Kathmandu, Nepal"
+            }
+            {
+              "title_name": "Data Engineer",
+              "start": "2020-12-01",
+              "end": "2022-06-30",
               "location": "Kathmandu, Nepal"
             }
           ],
