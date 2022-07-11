@@ -2,9 +2,6 @@ const months = ["January", "February", "March", "April", "May", "June", "July", 
 const today_date = new Date();
 
 function date_to_string(date) {
-  console.log(date, date.getTime());
-  console.log(date, today_date.getTime());
-  console.log(date.getTime() === today_date.getTime());
   return ((date.getTime() === today_date.getTime()) ? 'Present' : months[date.getMonth()] + ' ' + date.getFullYear().toString());
 }
 
@@ -78,7 +75,7 @@ $.getJSON("data/data.json").done(function (data) {
         var end_date = today_date;
         var start_date = new Date(title_object["start"]);
         end_date = (title_object["end"] === null ? end_date : new Date(title_object["end"]));
-        var months_count = calc_months(start_date, end_date);
+        var months_count = calc_months(start_date, end_date) + 1;
 
         company_experience_months += months_count;
 
@@ -91,6 +88,7 @@ $.getJSON("data/data.json").done(function (data) {
         titles += date_to_string(start_date).toUpperCase() + ' – ' + date_to_string(end_date).toUpperCase()
         titles += ' (' + months_readable(months_count) + ')'
         titles += '</div>'
+        company_experience_months -= title_index
       });
       $.each(experience_object["responsibilities"], function (responsibility_index, responsibility_desc) {
         responsibilities += '<li>' + responsibility_desc + '</li>'
