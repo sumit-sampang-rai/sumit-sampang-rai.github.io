@@ -155,7 +155,7 @@
           "responsibilities": [
             "Designed, developed, tested, and maintained file pipeline for the animators. Animators from different departments download necessary files or upload files they have worked on.",
             "Researched render batch commands and co-operated with the .NET programmer team to build an automated render job handler.",
-            "Developed remote services manager tool for the render department to ease their render jobs."
+            "Developed remote services manager tool for the rendering department to ease their render jobs."
           ]
         }
       ]
