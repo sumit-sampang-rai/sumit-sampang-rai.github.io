@@ -39,7 +39,7 @@
             "Built a CI pipeline from scratch in GitHub actions to have a quick feedback to the data model source contributors.",
             "Orchestrated data pipelines using Prefect that existed in EC2 so that we have centralized logging and proper visibility of the pipeline runs.",
             "Lead on moving all the data pipelines existing in Xplenty to Prefect orchestration. The data source would be S3 or APIs provided by the clients and the destination was the company's API.",
-            "Created and managed the SnowFlake objects: databases(catalogs), schemas, tables, views, stages, snowpipes, masks, and tasks.",
+            "Created and managed the SnowFlake objects: databases(catalogs), schemas, tables, views, stages, snowpipes, masks, and tasks."
           ]
         },
         {
