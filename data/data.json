@@ -10,7 +10,7 @@
     "text": "sumit-sampang-rai.github.io",
     "url": "https://sumit-sampang-rai.github.io/"
   },
-  "about": "Senior Data Engineer with 7+ years of experience in building an enterprise data warehouse, automating workflows, tackling challenging architectural and scalability problems. Currently working with CloudFactory for 3+ years to provide an on-demand, human powered data processing workforce for scaling critical business processes in the cloud with quality work.",
+  "about": "Sumit is a Sr. Data Engineer in CloudFactory, has an IT career of a total of 8 years, and experience in building an enterprise data warehouse, automating workflows, and tackling challenging architectural with scalability problems. He has worked for two years as Software Developer, four years as DevOps Engineer, and two years as Data Engineer. With this wide scope of experience, he meets the business objectives, has best practices for quality work, and can troubleshoot tough technical problems.",
   "work-experiences": [
     {
       "entity": "CloudFactory",
@@ -32,14 +32,14 @@
             }
           ],
           "responsibilities": [
-            "Load the data sources into the enterprise data warehouse using ETL/ELT tools and scripts.",
+            "Loaded the data sources into the enterprise data warehouse using ETL/ELT tools and scripts.",
             "Wrote transformations in DBT following the Kimball approach along with the documentation and testings. Also ensure the data is complete, accurate, and timely.",
             "Enforced documentation and testing in the team to achieve 80% above to meet the goal of the organization of having a true self-service BI platform.",
             "Introduced SQLfluff and automated strict implementation of linting our SQL queries in the DBT models.",
             "Built a CI pipeline from scratch in GitHub actions to have a quick feedback to the data model source contributors.",
             "Orchestrated data pipelines using Prefect that existed in EC2 so that we have centralized logging and proper visibility of the pipeline runs.",
             "Lead on moving all the data pipelines existing in Xplenty to Prefect orchestration. The data source would be S3 or APIs provided by the clients and the destination was the company's API.",
-            "Create and manage the SnowFlake objects: databases(catalogs), schemas, tables, views, stages, snowpipes, masks, and tasks.",
+            "Created and managed the SnowFlake objects: databases(catalogs), schemas, tables, views, stages, snowpipes, masks, and tasks.",
           ]
         },
         {
