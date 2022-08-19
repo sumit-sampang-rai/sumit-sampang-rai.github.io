@@ -32,15 +32,14 @@
             }
           ],
           "responsibilities": [
-            "Data modeling with Kimball approach.",
-            "Data transformation, documentation, and testing  with dbt tool. Along that creating seeds, snapshots, macros, and exposures.",
-            "Enforced documentation and testing in the team to achieve 80% above.",
-            "Introduced SQLfluff and automated strict implementation of linting our SQL queries in the dbt models.",
-            "Build a CI pipeline from scratch in GitHub actions.",
-            "Manage ELT connections in SaaS services such as Fivetran and Stitch.",
-            "Write tasks and flows in the Prefect orchestration tool.",
-            "Write and manage the SnowFlake objects: databases(catalogs), schemas, tables, views, stages, snowpipes, masks, and tasks.",
-            "Create and manage the users, roles, and grants in the SnowFlake enterprise data warehouse."
+            "Load the data sources into the enterprise data warehouse using ETL/ELT tools and scripts.",
+            "Wrote transformations in DBT following the Kimball approach along with the documentation and testings. Also ensure the data is complete, accurate, and timely.",
+            "Enforced documentation and testing in the team to achieve 80% above to meet the goal of the organization of having a true self-service BI platform.",
+            "Introduced SQLfluff and automated strict implementation of linting our SQL queries in the DBT models.",
+            "Built a CI pipeline from scratch in GitHub actions to have a quick feedback to the data model source contributors.",
+            "Orchestrated data pipelines using Prefect that existed in EC2 so that we have centralized logging and proper visibility of the pipeline runs.",
+            "Lead on moving all the data pipelines existing in Xplenty to Prefect orchestration. The data source would be S3 or APIs provided by the clients and the destination was the company's API.",
+            "Create and manage the SnowFlake objects: databases(catalogs), schemas, tables, views, stages, snowpipes, masks, and tasks.",
           ]
         },
         {
@@ -59,12 +58,12 @@
             }
           ],
           "responsibilities": [
-            "Troubleshoot and resolve issues in dev, test and production environments among many apps to support the ongoing platform development.",
-            "Monitoring the operation of the applications and also enhancing its performance.",
-            "Work collaboratively with software engineering teams to meet the Scrum sprint goals.",
+            "Took ownership of a critical messaging microservice application which is a forked open source, but was unreliable. I asked in the open source community, researched a lot, and tweaked it to make it reliable. I was awarded for my dedication.",
+            "Reduced the startup time of the EC2 instances by replacing ansible scripts with the Hashicorp packer.",
             "Write optimized SQL queries to process big data and get ultimate results to make proper business decisions.",
-            "Help automate and streamline the operations and processes as well as build and maintain tools for deployment, monitoring and operations.",
-            "Update and upgrade legacy infrastructure in order to avoid business operations."
+            "Troubleshoot and resolve issues in dev, test, and production environments among many apps to support the ongoing platform development.",
+            "Update and upgrade legacy infrastructure in order to continue business operations.",
+            "Work collaboratively with software engineering teams to meet the Scrum sprint goals."
           ]
         },
         {
@@ -129,15 +128,13 @@
             }
           ],
           "responsibilities": [
-            "Engineer, implement and monitor security measures for the protection of computer systems, networks and information.",
-            "Design and structure the Amazon Web Services (AWS) resources with Auto Scaling and Elastic Load Balancers via CloudFormation; configure and troubleshoot them as well.",
-            "Construct the automated deployment via Jenkins pipeline and Ansible scripts.",
-            "Setup firewall after installing pfSense in a server for the Intranet; configured traffic shaping, VPN (OpenVPN), IPS (Snort), web filter (Squid) and more.",
-            "Monitoring, scaling, security, backup and maintenance of all applications and deployment environments, and infrastructure in AWS Cloud under supervision.",
-            "Setup identity managers both FreeIPA and Active Directory to centralize the identities of the employees.",
-            "Responsible for looking after DNS records and SSL certificates for the clients’ account and as well as of the entity’s.",
-            "Govern the firewall, bandwidth policies for suitable working environments.",
-            "Continuous research and learning; discover, evaluate and implement changes to maximize software development efficiency."
+            "Developed python and Ansible scripts to configure EC2 infrastructures.",
+            "Constructed the Jenkins pipeline for automated deployments of the source code.",
+            "Designed and structured the Amazon Web Services (AWS) resources with Auto Scaling and Elastic Load Balancers via CloudFormation; configure and troubleshoot them as well.",
+            "Engineered, implemented, and monitored security measures for the protection of computer systems, networks, and information.",
+            "Setup and configured pfSense firewall for the Intranet; configured traffic shaping for suitable working environments, VPN (OpenVPN), IPS (Snort), web filter (Squid), and more.",
+            "Setup identity managers using both FreeIPA and Active Directory to centralize the identities of the employees.",
+            "Responsible for looking after DNS records and SSL certificates for the clients’ accounts as well as the entities."
           ]
         }
       ]
@@ -156,10 +153,9 @@
             }
           ],
           "responsibilities": [
-            "Design, installation, testing, and maintenance of software systems and production pipeline.",
-            "A pipeline built in Python to manage and share the work among the employees. The pipeline helped them automatically manage and fetch animation and graphical files without hassle.",
+            "Designed, developed, tested, and maintained file pipeline for the animators. Animators from different departments download necessary files or upload files they have worked on.",
             "Researched render batch commands and co-operated with the .NET programmer team to build an automated render job handler.",
-            "Implemented remote services manager tool to ease the jobs for renderers."
+            "Developed remote services manager tool for the render department to ease their render jobs."
           ]
         }
       ]
