@@ -26,7 +26,7 @@ $.getJSON("data/data.json").done(function (data) {
   var heading = '';
   var work_experiences = '';
   var academic_qualifications = '';
-  var recognitions = '';
+//   var recognitions = '';
   var skills = '';
   var all_experience_months = 0;
 
@@ -136,22 +136,22 @@ $.getJSON("data/data.json").done(function (data) {
     academic_qualifications += '</div>'
   });
 
-  $.each(data["recognitions"], function (recognition_index, recognition_object) {
-    $.each(recognition_object["awards"], function (award_index, award_object) {
-      var start_date = new Date(award_object["start"]);
-      var start_date_string = months[start_date.getMonth()] + ' ' + start_date.getFullYear().toString();
+//   $.each(data["recognitions"], function (recognition_index, recognition_object) {
+//     $.each(recognition_object["awards"], function (award_index, award_object) {
+//       var start_date = new Date(award_object["start"]);
+//       var start_date_string = months[start_date.getMonth()] + ' ' + start_date.getFullYear().toString();
 
-      recognitions += '<div class="items">'
-      recognitions += '<h3><strong>' + award_object["award_name"] + '</strong> — ' + recognition_object["entity"] + '</h3>'
-      recognitions += '<div class="highlight">'
-      recognitions += start_date_string.toUpperCase()
-      recognitions += '</div>'
-      recognitions += '<div class="details">'
-      recognitions += award_object["description"]
-      recognitions += '</div>'
-      recognitions += '</div>'
-    });
-  });
+//       recognitions += '<div class="items">'
+//       recognitions += '<h3><strong>' + award_object["award_name"] + '</strong> — ' + recognition_object["entity"] + '</h3>'
+//       recognitions += '<div class="highlight">'
+//       recognitions += start_date_string.toUpperCase()
+//       recognitions += '</div>'
+//       recognitions += '<div class="details">'
+//       recognitions += award_object["description"]
+//       recognitions += '</div>'
+//       recognitions += '</div>'
+//     });
+//   });
 
   $.each(data["skills"], function (skill_name, skill_object) {
     skills += '<h3>' + skill_name + '</h3>'
@@ -170,5 +170,5 @@ $.getJSON("data/data.json").done(function (data) {
   $("#work_experiences").append(work_experiences);
   $("#academic_qualifications").append(academic_qualifications);
   $("#skills").append(skills);
-  $("#recognitions").append(recognitions);
+//   $("#recognitions").append(recognitions);
 });
