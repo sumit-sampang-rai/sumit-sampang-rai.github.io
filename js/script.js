@@ -40,26 +40,16 @@ $.getJSON("data/data.json").done(function (data) {
   heading += '<span class="info-text">' + data["location"] + '</span>'
   heading += '</div>'
 
-  // linkedin
   heading += '<div class="info-item">'
   heading += '<span class="info-label"><i class="fab fa-linkedin"></i></span>'
   heading += '<span class="info-text"><a href="' + data["linkedin"]["url"] + '" target="_blank">' + data["linkedin"]["text"] + '</a></span>'
-  heading += '</div>'
-
-  // website
-  heading += '<div class="info-item">'
   heading += '<span class="info-label"><i class="fa fa-globe"></i></span>'
   heading += '<span class="info-text"><a href="' + data["website"]["url"] + '" target="_blank">' + data["website"]["text"] + '</a></span>'
   heading += '</div>'
 
-  // email
   heading += '<div class="info-item" hidden>'
   heading += '<span class="info-label"><i class="fa fa-envelope"></i></span>'
   heading += '<span class="info-text">@gmail.com</span>'
-  heading += '</div>'
-
-  // phone
-  heading += '<div class="info-item" hidden>'
   heading += '<span class="info-label"><i class="fa fa-phone"></i></span>'
   heading += '<span class="info-text">+977-98</span>'
   heading += '</div>'
