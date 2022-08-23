@@ -1,8 +1,7 @@
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const today_date = new Date();
 
 function date_to_string(date) {
-  return ((date.getTime() === today_date.getTime()) ? 'Present' : months[date.getMonth()] + ' ' + date.getFullYear().toString());
+  return ((date.getTime() === today_date.getTime()) ? 'Present' : ('0' + (date.getMonth()+1)).slice(-2) + '/' + date.getFullYear().toString());
 }
 
 function calc_months(start, end) {
