@@ -12,6 +12,13 @@ body {
   justify-content: center;
 }
 
+.btn-info {
+  z-index: 1;
+  position: absolute;
+  right: 100px;
+  top: 20px;
+}
+
 .btn-print {
   z-index: 1;
   position: absolute;
@@ -212,6 +219,10 @@ article .lang-label {
 @media print {
   body {
     min-width: initial !important;
+  }
+
+  .btn-info {
+    display: none;
   }
 
   .btn-print {

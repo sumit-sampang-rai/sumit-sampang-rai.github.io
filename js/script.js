@@ -46,7 +46,7 @@ $.getJSON("data/data.json").done(function (data) {
   heading += '<span class="info-text"><a href="' + data["website"]["url"] + '" target="_blank">' + data["website"]["text"] + '</a></span>'
   heading += '</div>'
 
-  heading += '<div class="info-item" hidden>'
+  heading += '<div id="contact-info" class="info-item" hidden>'
   heading += '<span class="info-label"><i class="fa fa-envelope"></i></span>'
   heading += '<span class="info-text">@gmail.com</span>'
   heading += '<span class="info-label"><i class="fa fa-phone"></i></span>'
