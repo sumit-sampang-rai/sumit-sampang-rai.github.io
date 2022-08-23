@@ -48,9 +48,9 @@ $.getJSON("data/data.json").done(function (data) {
 
   heading += '<div id="contact-info" class="info-item" hidden>'
   heading += '<span class="info-label"><i class="fa fa-envelope"></i></span>'
-  heading += '<span class="info-text">@gmail.com</span>'
+  heading += '<span id="info-email" class="info-text">@gmail.com</span>'
   heading += '<span class="info-label"><i class="fa fa-phone"></i></span>'
-  heading += '<span class="info-text">+977-98</span>'
+  heading += '<span id="info-phone" class="info-text">+977-98</span>'
   heading += '</div>'
 
   $.each(data["work-experiences"], function (work_experience_index, work_experience_object) {
@@ -161,3 +161,29 @@ $.getJSON("data/data.json").done(function (data) {
   $("#skills").append(skills);
 //   $("#recognitions").append(recognitions);
 });
+
+$(document).on("dblclick", "#info-email", function(){
+  var current = $(this).text();
+  $("#info-email").html('<input id="new-info-email" value="' + current + '"></input>');
+  $("#new-info-email").focus();
+  
+  $("#new-info-email").focus(function() {
+      console.log('in');
+  }).blur(function() {
+       var new_info_email = $("#new-info-email").val();
+       $("#info-email").text(new_info_email);
+  });
+})
+
+$(document).on("dblclick", "#info-phone", function(){
+  var current = $(this).text();
+  $("#info-phone").html('<input id="new-info-phone" value="' + current + '"></input>');
+  $("#new-info-phone").focus();
+  
+  $("#new-info-phone").focus(function() {
+      console.log('in');
+  }).blur(function() {
+       var new_info_phone = $("#new-info-phone").val();
+       $("#info-phone").text(new_info_phone);
+  });
+})
