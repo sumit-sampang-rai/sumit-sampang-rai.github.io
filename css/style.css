@@ -100,14 +100,8 @@ article .resume__columns {
 
 article .resume__main {
   float: left;
-  width: 75%;
   padding-right: 3em;
   text-align: justify;
-}
-
-article .resume__side {
-  float: left;
-  width: 25%;
 }
 
 article .info-item {
