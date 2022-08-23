@@ -32,12 +32,12 @@
             }
           ],
           "responsibilities": [
-            "Awarded recognition for working dedicatedly on different pieces of work in the data team and being a strong pillar for the team.",
-            "Lead on moving all the data pipelines existing in Xplenty to Prefect orchestration. The data source would be S3 or APIs provided by the clients and the destination was the company's API.",
-            "Enforced documentation and testing in the team to achieve 80% above to meet the goal of the organization of having a true self-service BI platform.",
-            "Wrote transformations in DBT following the Kimball approach along with the documentation and testings. Also ensure the data is complete, accurate, and timely.",
-            "Built a CI pipeline from scratch in GitHub actions to have a quick feedback to the data model source contributors.",
-            "Implemented the SQL standard strictly in the projects by introducing SQLfluff and checking automatically using GitHub actions.",
+            "Was awarded recognition for working dedicatedly on different pieces of work in the data team and being the pillar for the team.",
+            "Lead on moving all the data pipelines existing in Xplenty to Prefect orchestration due to the lower return value compared to the cost spent.",
+            "Had enforced documentation and testing in the team to achieve 80% above to meet the organization's goals of building a self-service BI platform.",
+            "Had written transformations in DBT following the Kimball approach and ensured the complete, accurate, and timely data.",
+            "Had built a CI pipeline from scratch in GitHub actions to have quick feedback to the data model source contributors.",
+            "Implemented the SQL standard strictly in the projects by introducing SQLfluff and automatically evaluating the quality of the SQL using GitHub actions.",
             "Loaded the data sources into the enterprise data warehouse using ETL/ELT tools and scripts.",
             "Orchestrated data pipelines using Prefect that existed in EC2 so that we have centralized logging and proper visibility of the pipeline runs.",
             "Created and managed the SnowFlake objects: databases(catalogs), schemas, tables, views, stages, snowpipes, masks, and tasks."
@@ -59,30 +59,13 @@
             }
           ],
           "responsibilities": [
-            "Awarded recognition for showing dedication towards increasing the availability and stability of a critical communication microservice application.",
-            "Reduced the startup time of the EC2 instances by replacing ansible scripts with the Hashicorp packer.",
-            "Write optimized SQL queries to process big data and get ultimate results to make proper business decisions.",
-            "Troubleshoot and resolve issues in dev, test, and production environments among many apps to support the ongoing platform development.",
-            "Update and upgrade legacy infrastructure in order to continue business operations.",
-            "Work collaboratively with software engineering teams to meet the Scrum sprint goals."
-          ]
-        },
-        {
-          "titles": [
-            {
-              "title_name": "Data Science Intern",
-              "start": "2020-11-01",
-              "end": "2020-11-30",
-              "location": "Kathmandu, Nepal"
-            }
-          ],
-          "responsibilities": [
-            "Troubleshoot and resolve issues in dev, test and production environments among many apps to support the ongoing platform development.",
-            "Monitoring the operation of the applications and also enhancing its performance.",
-            "Work collaboratively with software engineering teams to meet the Scrum sprint goals.",
-            "Write optimized SQL queries to process big data and get ultimate results to make proper business decisions.",
-            "Help automate and streamline the operations and processes as well as build and maintain tools for deployment, monitoring and operations.",
-            "Update and upgrade legacy infrastructure in order to avoid business operations."
+            "Was awarded recognition for showing dedication towards increasing the availability and stability of a critical communication microservice application from 95% to 99%.",
+            "Had reduced the startup time of the AutoScaling EC2 instances by 70% by replacing on-load executable ansible scripts into Hashicorp packer.",
+            "Wrote optimized SQL queries to process big data and get ultimate results to make proper business decisions.",
+            "Troubleshot and resolved issues among many apps to support the ongoing platform development in dev, test, and production environments.",
+            "Monitored the operation of the applications and also enhanced their performance.",
+            "Updated and upgraded legacy infrastructure to support business operations.",
+            "Worked collaboratively with software engineering teams to meet the Scrum sprint goals."
           ]
         }
       ]
