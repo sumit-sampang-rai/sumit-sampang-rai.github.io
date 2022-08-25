@@ -88,7 +88,7 @@ $.getJSON("data/data.json").done(function (data) {
       experiences += '</div>'
     });
     work_experiences += '<div class="items">'
-    // work_experiences += '<h2>' + work_experience_object["entity"] + ' (' + months_readable(company_experience_months) + ')' + '</h2>'
+    work_experiences += '<h2>' + work_experience_object["entity"]  + '</h2>' // + ' (' + months_readable(company_experience_months) + ')'
     work_experiences += experiences
     work_experiences += '</div>'
   });
