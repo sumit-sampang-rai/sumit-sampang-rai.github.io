@@ -31,7 +31,7 @@ $.getJSON("data/data.json").done(function (data) {
 
   // heading
   // title
-  heading += '<span id="my_name">' + data["name"] + '</span>'
+  heading += '<div id="my_name">' + data["name"] + '</div>'
 
   // location
   heading += '<div class="info-item">'
@@ -72,10 +72,13 @@ $.getJSON("data/data.json").done(function (data) {
           all_experience_months += months_count;
         };
 
-        titles += '<h3><strong>' + title_object["title_name"] + '</strong> — ' + title_object["location"] + '</h3>'
-        titles += '<div class="highlight">'
+        titles += '<div>'
+        titles += '<span class="heading3"><strong>' + title_object["title_name"] + '</strong></span>'
+        titles += ' - '
+        titles += '<span class="highlight">'
         titles += date_to_string(start_date).toUpperCase() + ' – ' + date_to_string(end_date).toUpperCase()
         // titles += ' (' + months_readable(months_count) + ')'
+        titles += '</span>'
         titles += '</div>'
         company_experience_months -= title_index
       });
@@ -88,7 +91,7 @@ $.getJSON("data/data.json").done(function (data) {
       experiences += '</div>'
     });
     work_experiences += '<div class="items">'
-    work_experiences += '<h2>' + work_experience_object["entity"]  + '</h2>' // + ' (' + months_readable(company_experience_months) + ')'
+    work_experiences += '<h2>' + work_experience_object["entity"]  + ' - ' + work_experience_object["location"] + '</h2>' // + ' (' + months_readable(company_experience_months) + ')'
     work_experiences += experiences
     work_experiences += '</div>'
   });
@@ -108,10 +111,13 @@ $.getJSON("data/data.json").done(function (data) {
 
         institution_education_months += months_count;
 
-        studies += '<h3><strong>' + study_object["study_name"] + '</strong> — ' + study_object["location"] + '</h3>'
-        studies += '<div class="highlight">'
+        studies += '<div>'
+        studies += '<span class="heading3"><strong>' + study_object["study_name"] + '</strong></span>'
+        studies += ' - '
+        studies += '<span class="highlight">'
         studies += date_to_string(start_date).toUpperCase() + ' – ' + date_to_string(end_date).toUpperCase()
         // studies += ' (' + months_readable(months_count) + ')'
+        studies += '</span>'
         studies += '</div>'
       });
       $.each(education_object["responsibilities"], function (responsibility_index, responsibility_desc) {
@@ -120,7 +126,7 @@ $.getJSON("data/data.json").done(function (data) {
       educations += studies
     });
     academic_qualifications += '<div class="items">'
-    academic_qualifications += '<h2>' + academic_qualification_object["entity"] + '</h2>'
+    academic_qualifications += '<h2>' + academic_qualification_object["entity"] + academic_qualification_object["location"] + '</h2>'
     academic_qualifications += educations
     academic_qualifications += '</div>'
   });
@@ -143,9 +149,12 @@ $.getJSON("data/data.json").done(function (data) {
 //   });
 
   $.each(data["skills"], function (skill_name, skill_object) {
-    skills += '<h3>' + skill_name + '</h3>'
-    skills += '<div class="highlight">'
+    skills += '<div>'
+    skills += '<span class="heading3">' + skill_name + '</span class="heading3">'
+    skills += ' - '
+    skills += '<span class="highlight">'
     skills += skill_object["sub_skills"].join(" · ").toUpperCase()
+    skills += '</span>'
     skills += '</div>'
     // skills += '<div class="extra-details">'
     // skills += '<div class="extra-details__progress" style="width: ' + skill_object["confidence"] + '%">'

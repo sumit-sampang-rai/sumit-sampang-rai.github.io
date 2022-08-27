@@ -150,12 +150,12 @@ article h2 {
   line-height: 1.25;
 }
 
-article h3 {
+article .heading3 {
   font-size: 1.1em;
   font-style: italic;
 }
 
-article h3 strong {
+article .heading3 strong {
   font-family: 'Merriweather', serif;
 }
 
