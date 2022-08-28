@@ -126,7 +126,7 @@ $.getJSON("data/data.json").done(function (data) {
       educations += studies
     });
     academic_qualifications += '<div class="items">'
-    academic_qualifications += '<h2>' + academic_qualification_object["entity"] + academic_qualification_object["location"] + '</h2>'
+    academic_qualifications += '<h2>' + academic_qualification_object["entity"] + ' - ' + academic_qualification_object["location"] + '</h2>'
     academic_qualifications += educations
     academic_qualifications += '</div>'
   });

@@ -148,10 +148,11 @@ article h2 {
   font-size: 1.4em;
   font-weight: 1000;
   line-height: 1.25;
+  margin-bottom: 3px;
 }
 
 article .heading3 {
-  font-size: 1.1em;
+  font-size: 1em;
   font-style: italic;
 }
 
