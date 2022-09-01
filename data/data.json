@@ -31,15 +31,15 @@
             }
           ],
           "responsibilities": [
-            "Was awarded recognition for working dedicatedly on different pieces of work in the data team and being the pillar for the team.",
-            "Lead on moving all the data pipelines existing in Xplenty to Prefect orchestration due to the lower return value compared to the cost spent.",
-            "Had enforced documentation and testing in the team to achieve 80% above to meet the organization's goals of building a self-service BI platform.",
-            "Had written transformations in DBT following the Kimball approach and ensured the complete, accurate, and timely data.",
-            "Had built a CI pipeline from scratch in GitHub actions to have quick feedback to the data model source contributors.",
-            "Implemented the SQL standard strictly in the projects by introducing SQLfluff and automatically evaluating the quality of the SQL using GitHub actions.",
+            "Led the migration of all data pipelines existing in Xplenty to Prefect orchestration due to the lower return value compared to the cost spent.",
+            "Recognized for working dedicatedly on different parts of the project and being the pillar of the data team.",
+            "Implemented documentation and tests, improving the team's performance by 80% and meeting the organization's goals of building a self-service BI platform.",
+            "Wrote transformations in dbt following the Kimball approach and ensured complete, accurate, and timely data.",
+            "Built a CI pipeline from scratch in GitHub Actions to have quick feedback for data model source contributors.",
+            "Implemented the SQL standard by introducing SQLFluff and automatically evaluating the quality of the SQL using GitHub Actions.",
             "Loaded the data sources into the enterprise data warehouse using ETL/ELT tools and scripts.",
-            "Orchestrated data pipelines using Prefect that existed in EC2 so that we have centralized logging and proper visibility of the pipeline runs.",
-            "Created and managed the SnowFlake objects: databases(catalogs), schemas, tables, views, stages, snowpipes, masks, and tasks."
+            "Orchestrated data pipelines using Prefect that existed in EC2 to enable centralized logging and proper visibility of the pipeline runs.",
+            "Created and managed the Snowflake objects, including databases, catalogs, schemas, tables, views, stages, Snowpipe, masks, and tasks."
           ]
         },
         {
@@ -56,13 +56,13 @@
             }
           ],
           "responsibilities": [
-            "Was awarded recognition for showing dedication towards increasing the availability and stability of a critical communication microservice application from 95% to 99%.",
-            "Had reduced the startup time of the AutoScaling EC2 instances by 70% by replacing on-load executable ansible scripts into Hashicorp packer.",
+            "Increased the availability and stability of a critical communication microservice application from 95% to 99% and was awarded for this effort.",
+            "Reduced the startup time of EC2 Auto Scaling instances by 70% by replacing on-load executable Ansible scripts into HashiCorp packer.",
             "Wrote optimized SQL queries to process big data and get ultimate results to make proper business decisions.",
-            "Troubleshot and resolved issues among many apps to support the ongoing platform development in dev, test, and production environments.",
-            "Monitored the operation of the applications and also enhanced their performance.",
+            "Troubleshot and resolved issues across many apps to support the ongoing platform development in development, test, and production environments.",
+            "Monitored the application's operation and enhanced its performance.",
             "Updated and upgraded legacy infrastructure to support business operations.",
-            "Worked collaboratively with software engineering teams to meet the Scrum sprint goals."
+            "Collaborated with the software engineering teams to meet the Scrum sprint goals."
           ]
         }
       ]
@@ -86,13 +86,12 @@
             }
           ],
           "responsibilities": [
-            "Developed python and Ansible scripts to configure EC2 infrastructures.",
-            "Constructed the Jenkins pipeline for automated deployments of the source code.",
-            "Designed and structured the Amazon Web Services (AWS) resources with Auto Scaling and Elastic Load Balancers via CloudFormation; configure and troubleshoot them as well.",
-            "Engineered, implemented, and monitored security measures for the protection of computer systems, networks, and information.",
-            "Setup and configured pfSense firewall for the Intranet; configured traffic shaping for suitable working environments, VPN (OpenVPN), IPS (Snort), web filter (Squid), and more.",
-            "Setup identity managers using both FreeIPA and Active Directory to centralize the identities of the employees.",
-            "Responsible for looking after DNS records and SSL certificates for the clients’ accounts as well as the entities."
+            "Developed the Python and Ansible scripts to configure EC2 infrastructures.",
+            "Constructed the Jenkins pipelines to deploy the source codes automatically.",
+            "Designed and structured the AWS resources with Auto Scaling and Elastic Load Balancing via CloudFormation. Configured and troubleshot them.",
+            "Set up and configured pfSense firewall for the intranet. Configured the traffic shaping for suitable working environments, VPN (OpenVPN), Snort IPS, and Squid web filter.",
+            "Engineered, implemented, and monitored security measures to protect computer systems, networks, and information.",
+            "Set up FreeIPA and Active Directory identity managers to centralize the employees' identities and manage access permissions in networks and servers."
           ]
         }
       ]
@@ -111,9 +110,9 @@
             }
           ],
           "responsibilities": [
-            "Designed, developed, tested, and maintained file pipeline for the animators. Animators from different departments download necessary files or upload files they have worked on.",
-            "Researched render batch commands and co-operated with the .NET programmer team to build an automated render job handler.",
-            "Developed remote services manager tool for the rendering department to ease their render jobs."
+            "Designed, developed, tested, and maintained file pipelines for animators from different departments to enable them to download necessary files or upload files they worked on.",
+            "Researched render batch commands and cooperated with the .NET programming team to build an automated render job handler.",
+            "Developed a remote services manager tool for the rendering department to ease their render jobs."
           ]
         }
       ]
