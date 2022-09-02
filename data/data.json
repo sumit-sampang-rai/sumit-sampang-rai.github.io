@@ -3,13 +3,19 @@
   "name": "Sumit Kumar Rai",
   "location": "Lalitpur-14, Nepal",
   "linkedin": {
-    "text": "https://www.linkedin.com/in/sumit-sampang-rai",
-    "url": "https://www.linkedin.com/in/sumit-sampang-rai"
+    "text": "https://www.linkedin.com/in/sumit-sampang-rai/",
+    "url": "https://www.linkedin.com/in/sumit-sampang-rai/"
   },
-  "website": {
-    "text": "https://sumit-sampang-rai.github.io/",
-    "url": "https://sumit-sampang-rai.github.io/"
-  },
+  "website": [
+    {
+      "text": "https://toptal.com/resume/sumit-kumar-rai/",
+      "url": "https://toptal.com/resume/sumit-kumar-rai/"
+    },
+    {
+      "text": "https://sumit-sampang-rai.github.io/",
+      "url": "https://sumit-sampang-rai.github.io/"
+    }
+  ],
   "about": "Sumit is a senior data engineer specializing in building an enterprise data warehouse, automating workflows, and tackling challenging architectural scalability problems. He has eight years of experience in the IT industry working as a software developer, DevOps engineer, and data engineer. With this vast experience, Sumit meets the business objectives, follows best practices to deliver quality products, and troubleshoots challenging technical problems.",
   "work-experiences": [
     {

@@ -42,8 +42,12 @@ $.getJSON("data/data.json").done(function (data) {
   heading += '<div class="info-item">'
   heading += '<span class="info-label"><i class="fab fa-linkedin"></i></span>'
   heading += '<span class="info-text"><a href="' + data["linkedin"]["url"] + '" target="_blank">' + data["linkedin"]["text"] + '</a></span>'
+  heading += '</div>'
+  heading += '<div class="info-item">'
   heading += '<span class="info-label"><i class="fa fa-globe"></i></span>'
-  heading += '<span class="info-text"><a href="' + data["website"]["url"] + '" target="_blank">' + data["website"]["text"] + '</a></span>'
+  $.each(data["website"], function (website_index, website_object) {
+    heading += '<span class="info-text"><a href="' + website_object["url"] + '" target="_blank">' + website_object["text"] + '</a></span>'
+  });
   heading += '</div>'
 
   heading += '<div id="contact-info" class="info-item" hidden>'
