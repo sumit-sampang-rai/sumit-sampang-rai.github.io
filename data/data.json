@@ -24,18 +24,9 @@
       "location": "Kathmandu, Nepal",
       "experiences": [
         {
-          "titles": [
-            {
-              "title_name": "Senior Data Engineer",
-              "start": "2022-07-01",
-              "end": null
-            },
-            {
-              "title_name": "Data Engineer",
-              "start": "2020-12-01",
-              "end": "2022-06-30"
-            }
-          ],
+          "title_name": "Senior Data Engineer",
+          "start": "2020-12-01",
+          "end": null,
           "responsibilities": [
             "Led the migration of all data pipelines existing in Xplenty to Prefect orchestration due to the lower return value compared to the cost spent.",
             "Recognized for working dedicatedly on different parts of the project and being the pillar of the data team.",
@@ -49,18 +40,9 @@
           ]
         },
         {
-          "titles": [
-            {
-              "title_name": "Software Engineer, DevOps",
-              "start": "2018-12-31",
-              "end": "2020-11-30"
-            },
-            {
-              "title_name": "Associate DevOps Engineer",
-              "start": "2018-10-01",
-              "end": "2018-11-30"
-            }
-          ],
+          "title_name": "Software Engineer, DevOps",
+          "start": "2018-10-01",
+          "end": "2020-11-30",
           "responsibilities": [
             "Increased the availability and stability of a critical communication microservice application from 95% to 99% and was awarded for this effort.",
             "Reduced the startup time of EC2 Auto Scaling instances by 70% by replacing on-load executable Ansible scripts into HashiCorp packer.",
@@ -79,18 +61,9 @@
       "location": "Kathmandu, Nepal",
       "experiences": [
         {
-          "titles": [
-            {
-              "title_name": "Software Engineer, DevOps",
-              "start": "2017-12-01",
-              "end": "2018-09-30"
-            },
-            {
-              "title_name": "Associate DevOps Engineer, System Administrator",
-              "start": "2016-09-01",
-              "end": "2017-12-31"
-            }
-          ],
+          "title_name": "Software Engineer, DevOps",
+          "start": "2016-09-01",
+          "end": "2018-09-30",
           "responsibilities": [
             "Developed the Python and Ansible scripts to configure EC2 infrastructures.",
             "Constructed the Jenkins pipelines to deploy the source codes automatically.",
@@ -108,13 +81,9 @@
       "location": "Kathmandu, Nepal",
       "experiences": [
         {
-          "titles": [
-            {
-              "title_name": "Software Developer",
-              "start": "2014-12-01",
-              "end": "2016-09-23"
-            }
-          ],
+          "title_name": "Software Developer",
+          "start": "2014-12-01",
+          "end": "2016-09-23",
           "responsibilities": [
             "Designed, developed, tested, and maintained file pipelines for animators from different departments to enable them to download necessary files or upload files they worked on.",
             "Researched render batch commands and cooperated with the .NET programming team to build an automated render job handler.",

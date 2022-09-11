@@ -27,7 +27,6 @@ $.getJSON("data/data.json").done(function (data) {
   var academic_qualifications = '';
 //   var recognitions = '';
   var skills = '';
-  var all_experience_months = 0;
 
   // heading
   // title
@@ -59,37 +58,25 @@ $.getJSON("data/data.json").done(function (data) {
 
   $.each(data["work-experiences"], function (work_experience_index, work_experience_object) {
     var experiences = '';
-    var company_experience_months = 0;
 
     $.each(work_experience_object["experiences"], function (experience_index, experience_object) {
       var responsibilities = '';
-      var titles = '';
-      $.each(experience_object["titles"], function (title_index, title_object) {
-        var end_date = today_date;
-        var start_date = new Date(title_object["start"]);
-        end_date = (title_object["end"] === null ? end_date : new Date(title_object["end"]));
-        var months_count = calc_months(start_date, end_date) + 1;
 
-        company_experience_months += months_count;
+      var end_date = today_date;
+      var start_date = new Date(experience_object["start"]);
+      end_date = (experience_object["end"] === null ? end_date : new Date(experience_object["end"]));
+      // var months_count = calc_months(start_date, end_date) + 1;
 
-        if (('count' in title_object) ? title_object['count'] : true) {
-          all_experience_months += months_count;
-        };
-
-        titles += '<div>'
-        titles += '<span class="heading3"><strong>' + title_object["title_name"] + '</strong></span>'
-        titles += ' - '
-        titles += '<span class="highlight">'
-        titles += date_to_string(start_date).toUpperCase() + ' – ' + date_to_string(end_date).toUpperCase()
-        // titles += ' (' + months_readable(months_count) + ')'
-        titles += '</span>'
-        titles += '</div>'
-        company_experience_months -= title_index
-      });
       $.each(experience_object["responsibilities"], function (responsibility_index, responsibility_desc) {
         responsibilities += '<li>' + responsibility_desc + '</li>'
       });
-      experiences += titles
+      experiences += '<div>'
+      experiences += '<span class="heading3"><strong>' + experience_object["title_name"] + '</strong></span>'
+      experiences += ' - '
+      experiences += '<span class="highlight">'
+      experiences += date_to_string(start_date).toUpperCase() + ' – ' + date_to_string(end_date).toUpperCase()
+      experiences += '</span>'
+      experiences += '</div>'
       experiences += '<div class="details">'
       experiences += '<ul>' + responsibilities + '</ul>'
       experiences += '</div>'
@@ -99,8 +86,6 @@ $.getJSON("data/data.json").done(function (data) {
     work_experiences += experiences
     work_experiences += '</div>'
   });
-
-  // console.log(months_readable(all_experience_months, plus = true));
 
   $.each(data["academic-qualifications"], function (academic_qualification_index, academic_qualification_object) {
     var educations = '';
