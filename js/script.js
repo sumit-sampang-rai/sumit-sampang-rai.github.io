@@ -160,32 +160,6 @@ $.getJSON("data/data.json").done(function (data) {
 //   $("#recognitions").append(recognitions);
 });
 
-// $(document).on("dblclick", "#info-email", function(){
-//   var current = $(this).text();
-//   $("#info-email").html('<input id="new-info-email" value="' + current + '"></input>');
-//   $("#new-info-email").focus();
-  
-//   $("#new-info-email").focus(function() {
-//       console.log('in');
-//   }).blur(function() {
-//        var new_info_email = $("#new-info-email").val();
-//        $("#info-email").text(new_info_email);
-//   });
-// })
-
-// $(document).on("dblclick", "#info-phone", function(){
-//   var current = $(this).text();
-//   $("#info-phone").html('<input id="new-info-phone" value="' + current + '"></input>');
-//   $("#new-info-phone").focus();
-  
-//   $("#new-info-phone").focus(function() {
-//       console.log('in');
-//   }).blur(function() {
-//        var new_info_phone = $("#new-info-phone").val();
-//        $("#info-phone").text(new_info_phone);
-//   });
-// })
-
 $(document).on("dblclick", ".editible-input", function(){
   var identifier = $(this);
   var new_identifier_id = 'new-' + this.id;
