@@ -51,9 +51,9 @@ $.getJSON("data/data.json").done(function (data) {
 
   heading += '<div id="contact-info" class="info-item" hidden>'
   heading += '<span class="info-label"><i class="fa fa-envelope"></i></span>'
-  heading += '<span id="info-email" class="info-text">@gmail.com</span>'
+  heading += '<span id="info-email" class="editible-input info-text">@gmail.com</span>'
   heading += '<span class="info-label"><i class="fa fa-phone"></i></span>'
-  heading += '<span id="info-phone" class="info-text">+977-98</span>'
+  heading += '<span id="info-phone" class="editible-input info-text">+977-98</span>'
   heading += '</div>'
 
   $.each(data["work-experiences"], function (work_experience_index, work_experience_object) {
@@ -77,7 +77,7 @@ $.getJSON("data/data.json").done(function (data) {
       experiences += date_to_string(start_date).toUpperCase() + ' – ' + date_to_string(end_date).toUpperCase()
       experiences += '</span>'
       experiences += '</div>'
-      experiences += '<div class="details">'
+      experiences += '<div id=exp-' + work_experience_index + experience_index + ' class="editible-textarea details">'
       experiences += '<ul>' + responsibilities + '</ul>'
       experiences += '</div>'
     });
@@ -109,9 +109,9 @@ $.getJSON("data/data.json").done(function (data) {
         studies += '</span>'
         studies += '</div>'
       });
-      $.each(education_object["responsibilities"], function (responsibility_index, responsibility_desc) {
-        responsibilities += '<li>' + responsibility_desc + '</li>'
-      });
+      // $.each(education_object["responsibilities"], function (responsibility_index, responsibility_desc) {
+      //   responsibilities += '<li>' + responsibility_desc + '</li>'
+      // });
       educations += studies
     });
     academic_qualifications += '<div class="items">'
@@ -160,28 +160,58 @@ $.getJSON("data/data.json").done(function (data) {
 //   $("#recognitions").append(recognitions);
 });
 
-$(document).on("dblclick", "#info-email", function(){
-  var current = $(this).text();
-  $("#info-email").html('<input id="new-info-email" value="' + current + '"></input>');
-  $("#new-info-email").focus();
+// $(document).on("dblclick", "#info-email", function(){
+//   var current = $(this).text();
+//   $("#info-email").html('<input id="new-info-email" value="' + current + '"></input>');
+//   $("#new-info-email").focus();
   
-  $("#new-info-email").focus(function() {
-      console.log('in');
-  }).blur(function() {
-       var new_info_email = $("#new-info-email").val();
-       $("#info-email").text(new_info_email);
-  });
-})
+//   $("#new-info-email").focus(function() {
+//       console.log('in');
+//   }).blur(function() {
+//        var new_info_email = $("#new-info-email").val();
+//        $("#info-email").text(new_info_email);
+//   });
+// })
 
-$(document).on("dblclick", "#info-phone", function(){
-  var current = $(this).text();
-  $("#info-phone").html('<input id="new-info-phone" value="' + current + '"></input>');
-  $("#new-info-phone").focus();
+// $(document).on("dblclick", "#info-phone", function(){
+//   var current = $(this).text();
+//   $("#info-phone").html('<input id="new-info-phone" value="' + current + '"></input>');
+//   $("#new-info-phone").focus();
   
-  $("#new-info-phone").focus(function() {
-      console.log('in');
-  }).blur(function() {
-       var new_info_phone = $("#new-info-phone").val();
-       $("#info-phone").text(new_info_phone);
+//   $("#new-info-phone").focus(function() {
+//       console.log('in');
+//   }).blur(function() {
+//        var new_info_phone = $("#new-info-phone").val();
+//        $("#info-phone").text(new_info_phone);
+//   });
+// })
+
+$(document).on("dblclick", ".editible-input", function(){
+  var identifier = $(this);
+  var new_identifier_id = 'new-' + this.id;
+  var current = $(this).text();
+  $(this).html('<input id="' + new_identifier_id + '" value="' + current + '"></input>');
+  new_identifier = $('#' + new_identifier_id)
+  new_identifier.focus();
+
+  new_identifier.focus().blur(function() {
+    var newcont = $(new_identifier).val();
+    console.log(identifier);
+    $(identifier).text(newcont);
   });
-})
+});
+
+$(document).on("dblclick", ".editible-textarea", function(){
+  var identifier = $(this);
+  var new_identifier_id = 'new-' + this.id;
+  var current = $(this).html();
+  $(this).html('<textarea id="' + new_identifier_id + '" rows="10" cols="100">' + current + '</textarea>');
+  new_identifier = $('#' + new_identifier_id)
+  new_identifier.focus();
+
+  new_identifier.focus().blur(function() {
+    var newcont = $(new_identifier).val();
+    console.log(newcont);
+    $(identifier).html(newcont);
+  });
+});
