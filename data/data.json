@@ -104,7 +104,17 @@
               "study_name": "Masters of Science in IT & Applied Security",
               "start": "2019-09-22",
               "end": "2022-06-09"
-            },
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "London Metropolitan University",
+      "location": "London, UK",
+      "educations": [
+        {
+          "studies": [
             {
               "study_name": "Bachelors of Science (Hons) in Computer Networking and IT Security",
               "start": "2012-02-01",
