@@ -26,7 +26,7 @@
         {
           "title_name": "Senior Data Engineer",
           "start": "2020-12-01",
-          "end": null,
+          "end": "2022-09-30",
           "responsibilities": [
             "Led the migration of all data pipelines existing in Xplenty to Prefect orchestration due to the lower return value compared to the cost spent.",
             "Recognized for working dedicatedly on different parts of the project and being the pillar of the data team.",
