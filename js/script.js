@@ -70,6 +70,7 @@ $.getJSON("data/data.json").done(function (data) {
       $.each(experience_object["responsibilities"], function (responsibility_index, responsibility_desc) {
         responsibilities += '<li>' + responsibility_desc + '</li>'
       });
+      experiences += '<h2>' + work_experience_object["entity"]  + ' - ' + work_experience_object["location"] + '</h2>' // + ' (' + months_readable(company_experience_months) + ')'
       experiences += '<div>'
       experiences += '<span class="heading3"><strong>' + experience_object["title_name"] + '</strong></span>'
       experiences += ' - '
@@ -82,7 +83,6 @@ $.getJSON("data/data.json").done(function (data) {
       experiences += '</div>'
     });
     work_experiences += '<div class="items">'
-    work_experiences += '<h2>' + work_experience_object["entity"]  + ' - ' + work_experience_object["location"] + '</h2>' // + ' (' + months_readable(company_experience_months) + ')'
     work_experiences += experiences
     work_experiences += '</div>'
   });
