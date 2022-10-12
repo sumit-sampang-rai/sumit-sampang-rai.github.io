@@ -73,16 +73,14 @@ $.getJSON("data/data.json").done(function (data) {
         responsibilities += '<li>' + responsibility_desc + '</li>'
       });
       experiences += '<h2>' + work_experience_object["entity"]  + ' - ' + work_experience_object["location"] + '</h2>' // + ' (' + months_readable(company_experience_months) + ')'
-      experiences += '<div>'
       experiences += '<span class="heading3"><strong>' + experience_object["title_name"] + '</strong></span>'
       experiences += ' - '
       experiences += '<span class="highlight">'
       experiences += date_to_string(start_date).toUpperCase() + ' – ' + date_to_string(end_date).toUpperCase()
       experiences += '</span>'
-      experiences += '</div>'
-      experiences += '<div id=exp-' + work_experience_index + experience_index + ' class="editible-textarea details">'
+      experiences += '<p id=exp-' + work_experience_index + experience_index + ' class="editible-textarea details">'
       experiences += '<ul>' + responsibilities + '</ul>'
-      experiences += '</div>'
+      experiences += '</p>'
     });
     work_experiences += '<div class="items">'
     work_experiences += experiences
@@ -102,14 +100,12 @@ $.getJSON("data/data.json").done(function (data) {
 
         institution_education_months += months_count;
 
-        studies += '<div>'
         studies += '<span class="heading3"><strong>' + study_object["study_name"] + '</strong></span>'
         studies += ' - '
         studies += '<span class="highlight">'
         studies += date_to_string(start_date).toUpperCase() + ' – ' + date_to_string(end_date).toUpperCase()
         // studies += ' (' + months_readable(months_count) + ')'
         studies += '</span>'
-        studies += '</div>'
       });
       // $.each(education_object["responsibilities"], function (responsibility_index, responsibility_desc) {
       //   responsibilities += '<li>' + responsibility_desc + '</li>'
@@ -140,13 +136,13 @@ $.getJSON("data/data.json").done(function (data) {
 //   });
 
   $.each(data["skills"], function (skill_name, skill_object) {
-    skills += '<div>'
+    skills += '<p>'
     skills += '<span class="heading3">' + skill_name + '</span class="heading3">'
     skills += ' - '
     skills += '<span class="highlight">'
     skills += skill_object["sub_skills"].join(" · ").toUpperCase()
     skills += '</span>'
-    skills += '</div>'
+    skills += '</p>'
     // skills += '<div class="extra-details">'
     // skills += '<div class="extra-details__progress" style="width: ' + skill_object["confidence"] + '%">'
     // skills += '</div>'
@@ -193,25 +189,33 @@ $(document).on("dblclick", ".editible-textarea", function(){
 });
 
 function ExportToDoc(element, filename = ''){
-  var header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Export HTML to Word Document with JavaScript</title></head><body>";
+  var header = "<html \
+  xmlns:v='urn:schemas-microsoft-com:vml' \
+  xmlns:o='urn:schemas-microsoft-com:office:office' \
+  xmlns:w='urn:schemas-microsoft-com:office:word' \
+  xmlns:m='http://schemas.microsoft.com/office/2004/12/omml' \
+  xmlns='http://www.w3.org/TR/REC-html40'>\
+  <head>\
+  <meta http-equiv=Content-Type content='text/html; charset=utf-8'>\
+  <title></title>\
+  <xml>\
+  <w:WordDocument>\
+  <w:View>Print</w:View>\
+  <w:Zoom>100</w:Zoom>\
+  <w:DoNotOptimizeForBrowser/>\
+  </w:WordDocument>\
+  </xml>\
+  </head>\
+  <body>";
   var footer = "</body></html>";
-  var html = header+document.getElementById(element).innerHTML+footer;
-  var blob = new Blob(['\ufeff', html], {
-      type: 'application/msword'
-  });
-  var url = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(html);
-  var downloadLink = document.createElement("a");
-
-  filename = filename ? filename + '.docx':'resume.docx';
-  document.body.appendChild(downloadLink);
-  
-  if(navigator.msSaveOrOpenBlob) {
-      navigator.msSaveOrOpenBlob(blob, filename);
-  }
-  else {
-      downloadLink.href = url;
-      downloadLink.download = filename;
-      downloadLink.click();
-  }
-  document.body.removeChild(downloadLink);
+  var html = header + footer;
+  // var html = header + document.getElementById(element).innerHTML + footer;
+  var sourceHTML = header + footer;
+  var source = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(sourceHTML);
+  var fileDownload = document.createElement('a');
+  document.body.appendChild(fileDownload);
+  fileDownload.href = source;
+  fileDownload.download = filename ? filename + '.doc':'resume.doc';
+  fileDownload.click();
+  document.body.removeChild(fileDownload);
 }

@@ -53,6 +53,7 @@ article h1 {
   font-weight: 600;
   line-height: 1;
   margin-bottom: 0;
+  margin-top: 2em;
 }
 
 article p {
@@ -77,9 +78,9 @@ article header {
   padding: 4em 4em 0;
 }
 
-article .resume__section {
-  margin-bottom: 2em;
-}
+/* article .resume__section {
+  padding-top: 2em;
+} */
 
 article .resume__section:last-child {
   padding-bottom: 0;
@@ -143,10 +144,6 @@ article .info-label i {
   color: #5695cd;
 }
 
-article .items {
-  margin-bottom: 2em;
-}
-
 article .items:last-child {
   margin-bottom: 0;
 }
@@ -155,7 +152,7 @@ article h2 {
   font-size: 1.4em;
   font-weight: 1000;
   line-height: 1.25;
-  margin-bottom: 3px;
+  margin-top: 1em;
 }
 
 article .heading3 {
