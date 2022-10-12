@@ -12,14 +12,21 @@ body {
   justify-content: center;
 }
 
-.btn-info {
+#info-button {
+  z-index: 1;
+  position: absolute;
+  right: 250px;
+  top: 20px;
+}
+
+#export-button {
   z-index: 1;
   position: absolute;
   right: 100px;
   top: 20px;
 }
 
-.btn-print {
+#print-button {
   z-index: 1;
   position: absolute;
   right: 20px;

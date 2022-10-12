@@ -46,12 +46,14 @@ $.getJSON("data/data.json").done(function (data) {
   heading += '<span class="info-label"><i class="fa fa-globe"></i></span>'
   $.each(data["website"], function (website_index, website_object) {
     heading += '<span class="info-text"><a href="' + website_object["url"] + '" target="_blank">' + website_object["text"] + '</a></span>'
+    heading += ' '
   });
   heading += '</div>'
 
   heading += '<div id="contact-info" class="info-item" hidden>'
   heading += '<span class="info-label"><i class="fa fa-envelope"></i></span>'
   heading += '<span id="info-email" class="editible-input info-text">@gmail.com</span>'
+  heading += ' '
   heading += '<span class="info-label"><i class="fa fa-phone"></i></span>'
   heading += '<span id="info-phone" class="editible-input info-text">+977-98</span>'
   heading += '</div>'
@@ -189,3 +191,27 @@ $(document).on("dblclick", ".editible-textarea", function(){
     $(identifier).html(newcont);
   });
 });
+
+function ExportToDoc(element, filename = ''){
+  var header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Export HTML to Word Document with JavaScript</title></head><body>";
+  var footer = "</body></html>";
+  var html = header+document.getElementById(element).innerHTML+footer;
+  var blob = new Blob(['\ufeff', html], {
+      type: 'application/msword'
+  });
+  var url = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(html);
+  var downloadLink = document.createElement("a");
+
+  filename = filename ? filename + '.docx':'resume.docx';
+  document.body.appendChild(downloadLink);
+  
+  if(navigator.msSaveOrOpenBlob) {
+      navigator.msSaveOrOpenBlob(blob, filename);
+  }
+  else {
+      downloadLink.href = url;
+      downloadLink.download = filename;
+      downloadLink.click();
+  }
+  document.body.removeChild(downloadLink);
+}

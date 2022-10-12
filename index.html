@@ -24,14 +24,18 @@
 
     <body class="A4">
         <div class="sheet">
-            <button class="btn btn-info btn-sm btn-light" onClick="document.getElementById('contact-info').toggleAttribute('hidden');">
+            <button id="info-button" class="btn btn-info btn-sm btn-light" onClick="document.getElementById('contact-info').toggleAttribute('hidden');">
                 <i class="fa fa-info"></i>
             </button>
-            <button class="btn btn-print btn-sm btn-light" onClick="window.print()">
+            <button id="export-button" class="btn btn-print btn-sm btn-light" onClick="ExportToDoc('main', 'Sumit Kumar Rai\'s Resume');">
+                <i class="fa fa-file-export"></i>
+                Export to Word
+            </button>
+            <button id="print-button" class="btn btn-print btn-sm btn-light" onClick="window.print();">
                 <i class="fa fa-print"></i>
                 Print
             </button>
-            <article class="two-column">
+            <article id="main" class="two-column">
                 <header class="resume__section">
                     <div id="heading" class="resume__content">
                     </div>
