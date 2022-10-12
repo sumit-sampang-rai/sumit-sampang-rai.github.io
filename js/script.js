@@ -168,7 +168,6 @@ $(document).on("dblclick", ".editible-input", function(){
 
   new_identifier.focus().blur(function() {
     var newcont = $(new_identifier).val();
-    console.log(identifier);
     $(identifier).text(newcont);
   });
 });
@@ -183,7 +182,6 @@ $(document).on("dblclick", ".editible-textarea", function(){
 
   new_identifier.focus().blur(function() {
     var newcont = $(new_identifier).val();
-    console.log(newcont);
     $(identifier).html(newcont);
   });
 });
