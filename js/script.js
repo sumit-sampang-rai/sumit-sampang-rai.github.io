@@ -52,9 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   <h2>${work.entity} - ${work.location}</h2>
                   <div class="heading3"><strong>${experience.title_name}</strong></div>
                   <div class="highlight">${date_to_string(new Date(experience.start)).toUpperCase()} – ${date_to_string(new Date(experience.end || today_date)).toUpperCase()}</div>
-                  <p class="editible-textarea details">
-                      <ul>${responsibilitiesHTML}</ul>
-                  </p>`;
+                  <ul>${responsibilitiesHTML}</ul>`;
             });
             workExperiencesHTML += `<div class="items">${experiencesHTML}</div>`;
         });
