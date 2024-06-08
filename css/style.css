@@ -115,7 +115,6 @@ article .resume__columns {
 
 article .resume__main {
   float: left;
-  padding-right: 3em;
   text-align: justify;
 }
 
@@ -149,9 +148,9 @@ article .items:last-child {
 }
 
 article h2 {
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: 1000;
-  line-height: 1.25;
+  line-height: 0.5;
   margin-top: .5em;
 }
 
@@ -165,8 +164,7 @@ article .heading3 strong {
 }
 
 article .highlight {
-  font-size: 0.9em;
-  margin-bottom: 0.5em;
+  font-size: 1em;
   color: #e91d63;
 }
 

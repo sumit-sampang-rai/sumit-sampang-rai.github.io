@@ -1,0 +1,201 @@
+page: "Sumit Kumar Rai's Resume"
+name: "Sumit Kumar Rai"
+location: "Lalitpur-14, Nepal"
+linkedin:
+  text: "linkedin.com/in/sumit-sampang-rai"
+  url: "https://www.linkedin.com/in/sumit-sampang-rai/"
+website: []
+about: "Sumit is a Senior Data Engineer with 9 years of IT experience. He specializes solving for US Healthcare Insurance and Workforce solution challenges using his diverse skill set and expertise. He excels in building enterprise data warehouses, automating workflows, writing software & scripts, and overcoming architectural & scalability obstacles. His role as a Data, DevOps, and Software Engineer enables him to face technical hurdles and achieve business objectives with top-notch results."
+work-experiences:
+  - entity: "Techkraft Inc."
+    registrar: "Techkraft Inc. Pvt. Ltd."
+    location: "Lalitpur, Nepal"
+    experiences:
+      - title_name: "Senior Data Engineer"
+        start: "2023-01-02"
+        responsibilities:
+          - "Managed a team of six highly skilled Software Engineers, providing leadership and guidance in understanding business objectives, system architectures, workflows, and technical challenges."
+          - "Streamlined and consolidated insurance claims data from multiple US Healthcare Insurance organizations, enhancing data usability and enabling efficient report generation."
+          - "Architected and developed automated data pipelines on the Databricks Platform using PySpark or SparkSQL for seamless extraction, loading, and transformation of data."
+          - "Ensured timely delivery of project requirements and conducted thorough reviews to maintain high-quality standards."
+          - "Facilitated cross-department communication and collaboration with Business Analyst (BA) and Quality Assurance (QA) teams, ensuring alignment and effective coordination throughout the project lifecycle."
+  - entity: "CloudFactory"
+    registrar: "Sprout Technology Services Pvt. Ltd."
+    location: "Kathmandu, Nepal"
+    experiences:
+      - title_name: "Senior Data Engineer"
+        start: "2020-12-01"
+        end: "2022-09-30"
+        responsibilities:
+          - "Successfully migrated data pipelines from Xplenty to Prefect orchestration, improving cost-effectiveness."
+          - "Developed Python and Pandas pipelines for fetching and ingesting data from clients' REST APIs."
+          - "Provided crucial support to the data team, overseeing technical operations of the enterprise data warehouse. Facilitated cross-departmental understanding of business operations, processes, and data origins."
+          - "Implemented documentation and testing protocols, resulting in an 80% improvement in team performance."
+          - "Supported the establishment of a self-service BI platform with accurate data delivery and user-friendly documentation."
+          - "Developed dbt transformations following the Kimball approach for complete, accurate, and timely data processing."
+          - "Created a CI pipeline in GitHub Actions, ensuring code quality checks, model validation, and data testing."
+          - "Maintained data team standards and data accuracy."
+          - "Orchestrated data pipelines using Prefect, transitioning from EC2 to enhance visibility and optimize resource allocation in the AWS Fargate environment."
+      - title_name: "Software Engineer, DevOps"
+        start: "2018-10-01"
+        end: "2020-11-30"
+        responsibilities:
+          - "Improved availability and stability of a critical communication microservice application, recognized and rewarded for achieving performance increase from 95% to 99%."
+          - "Implemented a game-changing optimization, reducing EC2 Auto Scaling instance startup time by 70%."
+          - "Replaced Ansible scripts with HashiCorp Packer for faster instance provisioning using custom AWS AMIs built with AWS CodeBuild."
+          - "Developed optimized SQL queries for processing big data, collaborating with data scientists on PySpark and AWS Glue jobs."
+          - "Orchestrated AWS Glue jobs and catalogs using AWS Step Functions and stored raw data in PostgreSQL for further processing and categorization."
+          - "Troubleshot and resolved issues across multiple applications in development, test, and production environments."
+          - "Monitored application performance proactively, optimizing operation and making necessary enhancements."
+          - "Led the upgrade of legacy infrastructure to align with evolving business operations and leverage advanced AWS services."
+          - "Migrated 200-300 instances to AWS VPC environment, enhancing security and internal connectivity."
+          - "Collaborated with software engineering teams to achieve Scrum sprint goals, fostering effective teamwork and alignment."
+  - entity: "Leapfrog Technology"
+    registrar: "Leapfrog Technology Nepal Pvt. Ltd."
+    location: "Kathmandu, Nepal"
+    experiences:
+      - title_name: "Software Engineer, DevOps"
+        start: "2016-09-01"
+        end: "2018-09-30"
+        responsibilities:
+          - "Developed Python and Ansible scripts to efficiently configure EC2 infrastructures, streamlining the deployment process and ensuring consistent configuration management."
+          - "Implemented Jenkins pipelines to automate the deployment of source codes, enabling seamless and efficient deployment workflows."
+          - "Designed and structured AWS resources utilizing Auto Scaling and Elastic Load Balancing through CloudFormation."
+          - "Configured and resolved issues related to these resources to optimize performance and scalability."
+          - "Deployed and configured pfSense firewall for the intranet, including traffic shaping for optimal working environments."
+          - "Configured additional security measures such as VPN (OpenVPN), Snort IPS, and Squid web filter to enhance network security."
+          - "Engineered, implemented, and monitored comprehensive security measures to safeguard computer systems, networks, and sensitive information, ensuring the integrity and confidentiality of data."
+          - "Established FreeIPA and Active Directory identity managers to centralize employee identities and manage access permissions across networks and servers, enhancing security and simplifying user management processes."
+  - entity: "Incessant Rain Animation Studios"
+    registrar: "Incessant Rain Animation Studios Pvt. Ltd."
+    location: "Kathmandu, Nepal"
+    experiences:
+      - title_name: "Software Developer"
+        start: "2014-12-01"
+        end: "2016-09-23"
+        responsibilities:
+          - "Designed and maintained file pipelines for seamless file transfers across departments, supporting animators in accessing and uploading necessary files."
+          - "Collaborated with the .NET programming team to automate render job handling, resulting in a streamlined rendering process with improved efficiency and reduced manual intervention."
+          - "Developed a customized remote services manager tool for the rendering department, simplifying render job management and increasing productivity while minimizing administrative overhead."
+academic-qualifications:
+  - entity: "London Metropolitan University"
+    location: "London, UK"
+    educations:
+      - studies:
+          - study_name: "Masters of Science in IT & Applied Security"
+            start: "2019-09-22"
+            end: "2022-06-09"
+  - entity: "London Metropolitan University"
+    location: "London, UK"
+    educations:
+      - studies:
+          - study_name: "Bachelors of Science (Hons) in Computer Networking and IT Security"
+            start: "2012-02-01"
+            end: "2014-01-31"
+  - entity: "Informatics Academy"
+    location: "Victoria Street, Singapore"
+    educations:
+      - studies:
+          - study_name: "International Diploma in Information and Communication Technology"
+            start: "2011-04-01"
+            end: "2011-12-31"
+skills:
+  Data:
+    confidence: 100
+    sub_skills:
+      - "Data Engineering"
+      - "Data Warehousing"
+      - "DBT"
+      - "Kimball"
+      - "SnowFlake"
+      - "Big Data"
+      - "Fivetran"
+      - "Prefect"
+      - "Meltano"
+      - "Pipelinewise"
+      - "Stitch"
+      - "Singer"
+      - "Snowpipe"
+      - "SQL"
+      - "MySQL"
+      - "PostgreSQL"
+      - "MongoDB"
+      - "Xplenty"
+  Cloud:
+    confidence: 100
+    sub_skills:
+      - "AWS EC2"
+      - "AWS RDS"
+      - "AWS S3"
+      - "AWS ECS"
+      - "AWS ECR"
+      - "AWS ELB"
+      - "AWS VPC"
+      - "AWS Route53"
+      - "AWS Lambda"
+      - "AWS IAM"
+      - "AWS ACM"
+      - "AWS CloudWatch"
+      - "AWS EFS"
+      - "AWS Athena"
+      - "AWS AutoScaling"
+      - "AWS Glue"
+      - "AWS Step Functions"
+      - "GoDaddy"
+      - "Google Data Studio"
+      - "Google Big Query"
+  DevOps:
+    confidence: 100
+    sub_skills:
+      - "Linux"
+      - "SSH"
+      - "Docker"
+      - "Ansible"
+      - "Hashicorp Terraform"
+      - "Jenkins"
+      - "Github"
+      - "Github Actions"
+      - "CI/CD"
+      - "NGINX"
+      - "Apache2"
+      - "Hashicorp Packer"
+      - "Kubernetes"
+  Networking:
+    confidence: 100
+    sub_skills:
+      - "TCP/IP"
+      - "IPv4"
+      - "IPv4 Subnetting"
+      - "DHCP"
+      - "pfSense"
+      - "OpenVPN"
+      - "Sophos Firewall"
+  Programming:
+    confidence: 100
+    sub_skills:
+      - "Python"
+      - "Regex"
+      - "OOP"
+      - "MVC"
+      - "REST API"
+      - "Bash"
+      - "Bash Script"
+      - "R"
+      - "Java"
+      - "HTML/CSS"
+      - "Rest API"
+      - "Laravel"
+      - "PHP"
+  Libraries:
+    confidence: 100
+    sub_skills:
+      - "Pandas"
+      - "Plotly"
+      - "Seaborn"
+      - "PyQt5"
+  Agile:
+    confidence: 100
+    sub_skills:
+      - "Jira"
+      - "Scrum"
+      - "Kanban"

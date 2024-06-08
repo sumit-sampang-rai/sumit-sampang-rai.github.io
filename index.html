@@ -2,127 +2,71 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title></title>
+    <meta charset="UTF-8">
+    <title>Resume - Sumit Kumar Rai</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.min.css" /> -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <!-- partial:index.partial.html -->
-    <html>
+<body class="A4">
+    <div class="sheet">
+        <button id="info-button" class="btn btn-info btn-sm btn-light" onClick="document.getElementById('contact-info').toggleAttribute('hidden');">
+            <i class="fa fa-info"></i>
+        </button>
+        <button id="export-button" class="btn btn-print btn-sm btn-light" onClick="ExportToDoc('main', 'Sumit Kumar Rai\'s Resume');">
+            <i class="fa fa-file-export"></i>
+            Export to Word
+        </button>
+        <button id="print-button" class="btn btn-print btn-sm btn-light" onClick="window.print();">
+            <i class="fa fa-print"></i>
+            Print
+        </button>
+        <article id="main" class="two-column">
+            <header class="resume__section resume__content" id="heading">
+                <!-- Add your heading content here -->
+            </header>
+            <section class="resume__columns">
+                <div class="resume__main">
+                    <section class="resume__section resume__summary">
+                        <h1 class="resume__section-title">Professional Summary</h1>
+                        <p id="about-me" class="about-me"></p>
+                    </section>
+                    <section class="resume__section resume__experience">
+                        <h1 class="resume__section-title">Experience</h1>
+                        <div id="work_experiences" class="resume__content">
+                            <!-- Add your work experiences here -->
+                        </div>
+                    </section>
+                    <section class="resume__section resume__skills">
+                        <h1 class="resume__section-title">Skills</h1>
+                        <div id="skills" class="resume__text">
+                            <!-- Add your skills here -->
+                        </div>
+                    </section>
+                    <section class="resume__section resume__qualification">
+                        <h1 class="resume__section-title">Education</h1>
+                        <div id="academic_qualifications" class="resume__content">
+                            <!-- Add your academic qualifications here -->
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </article>
+    </div>
 
-    <head></head>
-
-    <body class="A4">
-        <div class="sheet">
-            <button id="info-button" class="btn btn-info btn-sm btn-light" onClick="document.getElementById('contact-info').toggleAttribute('hidden');">
-                <i class="fa fa-info"></i>
-            </button>
-            <button id="export-button" class="btn btn-print btn-sm btn-light" onClick="ExportToDoc('main', 'Sumit Kumar Rai\'s Resume');">
-                <i class="fa fa-file-export"></i>
-                Export to Word
-            </button>
-            <button id="print-button" class="btn btn-print btn-sm btn-light" onClick="window.print();">
-                <i class="fa fa-print"></i>
-                Print
-            </button>
-            <article id="main" class="two-column">
-                <header class="resume__section">
-                    <div id="heading" class="resume__content">
-                    </div>
-                </header>
-                <section class="resume__columns">
-                    <div class="resume__main">
-                        <section class="resume__section resume__summary">
-                            <div class="resume__content">
-                                <div class="resume__section-title">
-                                    <h1>Professional Summary</h1>
-                                </div>
-                                <div class="about-me">
-                                    <p id="about-me"></p>
-                                </div>
-                            </div>
-                        </section>
-                        <section class="resume__section resume__experience">
-                            <div class="resume__section-title">
-                                <h1>Experience</h1>
-                            </div>
-                            <div id="work_experiences" class="resume__content">
-                            </div>
-                        </section>
-                        <section class="resume__section">
-                            <div class="resume__content">
-                                <div class="resume__section-title">
-                                    <h1>Skills</h1>
-                                </div>
-                                <div id="skills" class="resume__text"></div>
-                            </div>
-                        </section>
-                        <section class="resume__section resume__qualification">
-                            <div class="resume__section-title">
-                                <h1>Education</h1>
-                            </div>
-                            <div id="academic_qualifications" class="resume__content">
-                            </div>
-                        </section>
-<!--                         <section class="resume__section">
-                            <div class="resume__content">
-                                <div class="resume__section-title">
-                                    <h1>Awards</h1>
-                                </div>
-                                <div id="recognitions" class="resume__text"></div>
-                            </div>
-                        </section> -->
-                        <!-- <section class="resume__section resume__languages">
-                            <div class="resume__content">
-                                <div class="resume__section-title">
-                                    <i class="fa fa-globe"></i>
-                                    <h1>Languages</h1>
-                                </div>
-                                <div class="extra">
-                                    <div class="extra-info">
-                                        Portuguese <small>(native)</small>
-                                    </div>
-                                    <div class="extra-details">
-                                        <div class="extra-details__progress" style="width: 100%"></div>
-                                    </div>
-                                </div>
-                                <div class="extra">
-                                    <div class="extra-info">English</div>
-                                    <div class="extra-details">
-                                        <div class="extra-details__progress" style="width: 65%"></div>
-                                    </div>
-                                </div>
-                                <div class="extra">
-                                    <div class="extra-info">Spanish</div>
-                                    <div class="extra-details">
-                                        <div class="extra-details__progress" style="width: 20%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section> -->
-                    </div>
-                </section>
-            </article>
-        </div>
-    </body>
-
-    </html>
-    <!-- partial -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
         integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
