@@ -19,6 +19,32 @@ work-experiences:
           - "Architected and developed automated data pipelines on the Databricks Platform using PySpark or SparkSQL for seamless extraction, loading, and transformation of data."
           - "Ensured timely delivery of project requirements and conducted thorough reviews to maintain high-quality standards."
           - "Facilitated cross-department communication and collaboration with Business Analyst (BA) and Quality Assurance (QA) teams, ensuring alignment and effective coordination throughout the project lifecycle."
+        skills:
+          - Databricks
+          - Databricks Pipeline
+          - SnowFlake
+          - PySpark
+          - Spark SQL
+          - Python
+          - Data Engineering
+          - Data Warehousing
+          - Docker
+          - Containerization
+          - ANTLR4
+          - ETL / ELT
+          - dbt
+          - Terraform
+          - Amazon Web Services
+          - AWS S3
+          - OLAP / OLTP
+          - GitLab
+          - Pandas
+          - Excel
+          - JSON / YAML
+          - Parquet
+          - REST APIs
+          - JIRA
+          - Scrum
   - entity: "CloudFactory"
     registrar: "Sprout Technology Services Pvt. Ltd."
     location: "Kathmandu, Nepal"
@@ -36,6 +62,38 @@ work-experiences:
           - "Created a CI pipeline in GitHub Actions, ensuring code quality checks, model validation, and data testing."
           - "Maintained data team standards and data accuracy."
           - "Orchestrated data pipelines using Prefect, transitioning from EC2 to enhance visibility and optimize resource allocation in the AWS Fargate environment."
+        skills:
+          - SnowFlake
+          - dbt
+          - Fivetran
+          - Python
+          - Data Engineering
+          - Data Warehousing
+          - Enterprise Data Warehouse
+          - Kimball
+          - Docker
+          - Containerization
+          - ETL / ELT
+          - Prefect
+          - Terraform
+          - Amazon Web Services
+          - AWS S3
+          - AWS ECS
+          - AWS ECR
+          - AWS EC2
+          - OLAP / OLTP
+          - GitHub
+          - GitHub Actions
+          - Xplenty
+          - Stitch
+          - Pipelinewise
+          - Singer
+          - Pandas
+          - Excel
+          - REST APIs
+          - JIRA
+          - Scrum
+          - Kanban
       - title_name: "Software Engineer, DevOps"
         start: "2018-10-01"
         end: "2020-11-30"
@@ -50,6 +108,38 @@ work-experiences:
           - "Led the upgrade of legacy infrastructure to align with evolving business operations and leverage advanced AWS services."
           - "Migrated 200-300 instances to AWS VPC environment, enhancing security and internal connectivity."
           - "Collaborated with software engineering teams to achieve Scrum sprint goals, fostering effective teamwork and alignment."
+        skills:
+          - Ansible
+          - Amazon Web Services
+          - AWS Athena
+          - AWS CloudFormation
+          - AWS S3
+          - AWS IAM
+          - AWS ECS
+          - AWS ECR
+          - AWS EC2
+          - AWS ELB
+          - AWS RDS
+          - AWS Glue
+          - AWS Step Functions
+          - GitHub
+          - GitHub Actions
+          - REST APIs
+          - SSH
+          - Jenkins
+          - PostgreSQL
+          - SQL
+          - MongoDB
+          - RabbitMQ
+          - Docker
+          - Containerization
+          - Hashicorp Terraform
+          - Hashicorp Packer
+          - NGINX
+          - Apache2
+          - Burp Suite
+          - JIRA
+          - Scrum
   - entity: "Leapfrog Technology"
     registrar: "Leapfrog Technology Nepal Pvt. Ltd."
     location: "Kathmandu, Nepal"
@@ -66,6 +156,33 @@ work-experiences:
           - "Configured additional security measures such as VPN (OpenVPN), Snort IPS, and Squid web filter to enhance network security."
           - "Engineered, implemented, and monitored comprehensive security measures to safeguard computer systems, networks, and sensitive information, ensuring the integrity and confidentiality of data."
           - "Established FreeIPA and Active Directory identity managers to centralize employee identities and manage access permissions across networks and servers, enhancing security and simplifying user management processes."
+        skills:
+          - Amazon Web Services
+          - AWS CloudFormation
+          - AWS S3
+          - AWS IAM
+          - AWS EC2
+          - AWS ELB
+          - AWS RDS
+          - AWS Route53
+          - Ansible
+          - GitHub
+          - REST APIs
+          - SSH
+          - Jenkins
+          - SQL
+          - Docker
+          - Containerization
+          - Hashicorp Terraform
+          - NGINX
+          - Apache2
+          - Burp Suite
+          - SSL Management
+          - pfSense
+          - OpenVPN
+          - FreeIPA
+          - Sophos
+          - Scrum
   - entity: "Incessant Rain Animation Studios"
     registrar: "Incessant Rain Animation Studios Pvt. Ltd."
     location: "Kathmandu, Nepal"
@@ -77,6 +194,12 @@ work-experiences:
           - "Designed and maintained file pipelines for seamless file transfers across departments, supporting animators in accessing and uploading necessary files."
           - "Collaborated with the .NET programming team to automate render job handling, resulting in a streamlined rendering process with improved efficiency and reduced manual intervention."
           - "Developed a customized remote services manager tool for the rendering department, simplifying render job management and increasing productivity while minimizing administrative overhead."
+        skills:
+          - Python
+          - REST APIs
+          - Microsoft SQL Server
+          - SQL
+          - Regex
 academic-qualifications:
   - entity: "London Metropolitan University"
     location: "London, UK"

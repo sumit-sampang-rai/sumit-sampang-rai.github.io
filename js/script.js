@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
     fetch('data/data.yml')
         .then(response => response.text())
         .then(yamlText => {
@@ -10,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const today_date = new Date();
 
     function date_to_string(date) {
-        return ((date.getTime() === today_date.getTime()) ? 'Present' : ('0' + (date.getMonth() + 1)).slice(-2) + '/' + date.getFullYear().toString());
+        return ((date.getTime() === today_date.getTime()) ? 'Present' : monthNames[(date.getMonth())] + ' ' + date.getFullYear().toString());
     }
 
     function populateData(data) {
@@ -53,6 +55,9 @@ document.addEventListener("DOMContentLoaded", function () {
                   <div class="heading3"><strong>${experience.title_name}</strong></div>
                   <div class="highlight">${date_to_string(new Date(experience.start)).toUpperCase()} – ${date_to_string(new Date(experience.end || today_date)).toUpperCase()}</div>
                   <ul>${responsibilitiesHTML}</ul>`;
+                if (experience.skills && experience.skills.length > 0) {
+                    experiencesHTML += `<div class="highlight">${experience.skills.join(" · ").toUpperCase()}</div>`;
+                }
             });
             workExperiencesHTML += `<div class="items">${experiencesHTML}</div>`;
         });
@@ -82,3 +87,65 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById('skills').innerHTML = skillsHTML;
     }
 });
+
+function ExportToDoc(elementId, filename = '') {
+    var element = document.getElementById(elementId);
+    var clonedElement = element.cloneNode(true);
+
+    // Function to convert computed styles to inline styles
+    function applyInlineStyles(element) {
+        var nodes = element.getElementsByTagName('*');
+        for (var i = 0; i < nodes.length; i++) {
+            var node = nodes[i];
+            var computedStyle = window.getComputedStyle(node);
+            var style = '';
+
+            for (var j = 0; j < computedStyle.length; j++) {
+                var key = computedStyle[j];
+                var value = computedStyle.getPropertyValue(key);
+                style += key + ':' + value + ';';
+            }
+
+            node.setAttribute('style', style);
+        }
+    }
+
+    applyInlineStyles(clonedElement);
+
+    var header = "<html \
+    xmlns:v='urn:schemas-microsoft-com:vml' \
+    xmlns:o='urn:schemas-microsoft-com:office:office' \
+    xmlns:w='urn:schemas-microsoft-com:office:word' \
+    xmlns:m='http://schemas.microsoft.com/office/2004/12/omml' \
+    xmlns='http://www.w3.org/TR/REC-html40'>\
+    <head>\
+    <meta http-equiv=Content-Type content='text/html; charset=utf-8'>\
+    <title></title>\
+    <style>\
+    /* Add any additional styles here if necessary */\
+    </style>\
+    <xml>\
+    <w:WordDocument>\
+    <w:View>Print</w:View>\
+    <w:Zoom>100</w:Zoom>\
+    <w:DoNotOptimizeForBrowser/>\
+    </w:WordDocument>\
+    </xml>\
+    </head>\
+    <body>";
+
+    var footer = "</body></html>";
+
+    var sourceHTML = header + clonedElement.innerHTML + footer;
+    var blob = new Blob(['\ufeff', sourceHTML], {
+        type: 'application/msword'
+    });
+
+    var link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = filename ? filename + '.doc' : 'document.doc';
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
