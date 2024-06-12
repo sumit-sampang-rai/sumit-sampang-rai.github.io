@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 experiencesHTML += `
                   <h2>${work.entity} - ${work.location}</h2>
-                  <div class="heading3"><strong>${experience.title_name}</strong></div>
+                  <div class="heading3"><strong class="editible-input">${experience.title_name}</strong></div>
                   <div class="highlight">${date_to_string(new Date(experience.start)).toUpperCase()} – ${date_to_string(new Date(experience.end || today_date)).toUpperCase()}</div>
                   <ul>${responsibilitiesHTML}</ul>`;
                 if (experience.skills && experience.skills.length > 0) {
@@ -73,18 +73,47 @@ document.addEventListener("DOMContentLoaded", function () {
         // Academic Qualifications
         let academicQualificationsHTML = '';
         data['academic-qualifications'].forEach(qualification => {
-            let educationsHTML = '';
             qualification.educations.forEach(education => {
+                let educationsHTML = '';
                 let studiesHTML = education.studies.map(study => `
+                  <h2>${qualification.entity} - ${qualification.location}</h2>
                   <div class="heading3"><strong>${study.study_name}</strong></div>
                   <div class="highlight">${date_to_string(new Date(study.start)).toUpperCase()} – ${date_to_string(new Date(study.end || today_date)).toUpperCase()}</div>
-              `).join('');
+                  `);
                 educationsHTML += studiesHTML;
+                academicQualificationsHTML += `<div class="items">${educationsHTML}</div>`;
             });
-            academicQualificationsHTML += `<div class="items"><h2>${qualification.entity} - ${qualification.location}</h2>${educationsHTML}</div>`;
         });
         document.getElementById('academic_qualifications').innerHTML = academicQualificationsHTML;
     }
+
+    $(document).on("dblclick", ".editible-input", function(){
+        var identifier = $(this);
+        var new_identifier_id = 'new-' + this.id;
+        var current = $(this).text();
+        $(this).html('<input id="' + new_identifier_id + '" value="' + current + '"></input>');
+        new_identifier = $('#' + new_identifier_id)
+        new_identifier.focus();
+      
+        new_identifier.focus().blur(function() {
+          var newcont = $(new_identifier).val();
+          $(identifier).text(newcont);
+        });
+    });
+
+    $(document).on("dblclick", ".editible-textarea", function(){
+        var identifier = $(this);
+        var new_identifier_id = 'new-' + this.id;
+        var current = $(this).text();
+        $(this).html('<textarea id="' + new_identifier_id + '" rows="4" cols="100">' + current + '</textarea>');
+        new_identifier = $('#' + new_identifier_id)
+        new_identifier.focus();
+      
+        new_identifier.focus().blur(function() {
+          var newcont = $(new_identifier).val();
+          $(identifier).text(newcont);
+        });
+    });
 });
 
 function ExportToDoc(elementId, filename = '') {

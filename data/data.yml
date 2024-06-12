@@ -5,13 +5,13 @@ linkedin:
   text: "linkedin.com/in/sumit-sampang-rai"
   url: "https://www.linkedin.com/in/sumit-sampang-rai/"
 website: []
-about: "Sumit is a Senior Data Engineer with 9 years of IT experience. He specializes solving for US Healthcare Insurance and Workforce solution challenges using his diverse skill set and expertise. He excels in building enterprise data warehouses, automating workflows, writing software & scripts, and overcoming architectural & scalability obstacles. His role as a Data, DevOps, and Software Engineer enables him to face technical hurdles and achieve business objectives with top-notch results."
+about: "Sumit is a Principal Software Engineer with 9 years of IT experience. He specializes solving for US Healthcare Insurance and Workforce solution challenges using his diverse skill set and expertise. He excels in building enterprise data warehouses, automating workflows, writing software & scripts, and overcoming architectural & scalability obstacles. His role as a Data, DevOps, and Software Engineer enables him to face technical hurdles and achieve business objectives with top-notch results."
 work-experiences:
   - entity: "Techkraft Inc."
     registrar: "Techkraft Inc. Pvt. Ltd."
     location: "Lalitpur, Nepal"
     experiences:
-      - title_name: "Senior Data Engineer"
+      - title_name: "Principal Software Engineer"
         start: "2023-01-02"
         responsibilities:
           - "Managed a team of six highly skilled Software Engineers, providing leadership and guidance in understanding business objectives, system architectures, workflows, and technical challenges."
@@ -208,10 +208,6 @@ academic-qualifications:
           - study_name: "Masters of Science in IT & Applied Security"
             start: "2019-09-22"
             end: "2022-06-09"
-  - entity: "London Metropolitan University"
-    location: "London, UK"
-    educations:
-      - studies:
           - study_name: "Bachelors of Science (Hons) in Computer Networking and IT Security"
             start: "2012-02-01"
             end: "2014-01-31"
