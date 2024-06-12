@@ -223,102 +223,13 @@ academic-qualifications:
             start: "2011-04-01"
             end: "2011-12-31"
 skills:
-  Data:
-    confidence: 100
-    sub_skills:
-      - "Data Engineering"
-      - "Data Warehousing"
-      - "DBT"
-      - "Kimball"
-      - "SnowFlake"
-      - "Big Data"
-      - "Fivetran"
-      - "Prefect"
-      - "Meltano"
-      - "Pipelinewise"
-      - "Stitch"
-      - "Singer"
-      - "Snowpipe"
-      - "SQL"
-      - "MySQL"
-      - "PostgreSQL"
-      - "MongoDB"
-      - "Xplenty"
-  Cloud:
-    confidence: 100
-    sub_skills:
-      - "AWS EC2"
-      - "AWS RDS"
-      - "AWS S3"
-      - "AWS ECS"
-      - "AWS ECR"
-      - "AWS ELB"
-      - "AWS VPC"
-      - "AWS Route53"
-      - "AWS Lambda"
-      - "AWS IAM"
-      - "AWS ACM"
-      - "AWS CloudWatch"
-      - "AWS EFS"
-      - "AWS Athena"
-      - "AWS AutoScaling"
-      - "AWS Glue"
-      - "AWS Step Functions"
-      - "GoDaddy"
-      - "Google Data Studio"
-      - "Google Big Query"
-  DevOps:
-    confidence: 100
-    sub_skills:
-      - "Linux"
-      - "SSH"
-      - "Docker"
-      - "Ansible"
-      - "Hashicorp Terraform"
-      - "Jenkins"
-      - "Github"
-      - "Github Actions"
-      - "CI/CD"
-      - "NGINX"
-      - "Apache2"
-      - "Hashicorp Packer"
-      - "Kubernetes"
-  Networking:
-    confidence: 100
-    sub_skills:
-      - "TCP/IP"
-      - "IPv4"
-      - "IPv4 Subnetting"
-      - "DHCP"
-      - "pfSense"
-      - "OpenVPN"
-      - "Sophos Firewall"
-  Programming:
-    confidence: 100
-    sub_skills:
-      - "Python"
-      - "Regex"
-      - "OOP"
-      - "MVC"
-      - "REST API"
-      - "Bash"
-      - "Bash Script"
-      - "R"
-      - "Java"
-      - "HTML/CSS"
-      - "Rest API"
-      - "Laravel"
-      - "PHP"
-  Libraries:
-    confidence: 100
-    sub_skills:
-      - "Pandas"
-      - "Plotly"
-      - "Seaborn"
-      - "PyQt5"
-  Agile:
-    confidence: 100
-    sub_skills:
-      - "Jira"
-      - "Scrum"
-      - "Kanban"
+  - Python
+  - DBT
+  - SQL
+  - SnowFlake
+  - Databricks
+  - ETL / ELT
+  - PySpark
+  - AWS
+  - Docker Containerization
+  - CI/CD

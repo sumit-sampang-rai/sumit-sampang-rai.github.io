@@ -66,6 +66,7 @@ article p:last-child {
 
 article ul {
   padding-left: 20px;
+  margin-bottom: 5px;
 }
 
 article header,
@@ -107,6 +108,10 @@ article .resume__section-title>i {
   line-height: 1.6;
 }
 
+article .resume__content .items {
+  margin-bottom: 25px;
+}
+
 article .resume__columns {
   overflow: hidden;
   padding: 4em;
@@ -143,10 +148,6 @@ article .info-label i {
   color: #5695cd;
 }
 
-article .items:last-child {
-  margin-bottom: 0;
-}
-
 article h2 {
   font-size: 1.3em;
   font-weight: 1000;
@@ -173,7 +174,7 @@ article .details {
 }
 
 article .extra {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 article .extra:last-child {

@@ -44,12 +44,19 @@ document.addEventListener("DOMContentLoaded", function () {
         // About Me
         document.getElementById('about-me').innerText = data.about;
 
+        // Skills
+        let skillsHTML = `
+            <span class="highlight">${data.skills.join(" · ").toUpperCase()}</span>
+        `;
+        document.getElementById('skills').innerHTML = skillsHTML;
+
         // Work Experiences
         let workExperiencesHTML = '';
         data['work-experiences'].forEach(work => {
-            let experiencesHTML = '';
             work.experiences.forEach(experience => {
+                let experiencesHTML = '';
                 let responsibilitiesHTML = experience.responsibilities.map(responsibility => `<li>${responsibility}</li>`).join('');
+                
                 experiencesHTML += `
                   <h2>${work.entity} - ${work.location}</h2>
                   <div class="heading3"><strong>${experience.title_name}</strong></div>
@@ -58,8 +65,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (experience.skills && experience.skills.length > 0) {
                     experiencesHTML += `<div class="highlight">${experience.skills.join(" · ").toUpperCase()}</div>`;
                 }
+                workExperiencesHTML += `<div class="items">${experiencesHTML}</div>`;
             });
-            workExperiencesHTML += `<div class="items">${experiencesHTML}</div>`;
         });
         document.getElementById('work_experiences').innerHTML = workExperiencesHTML;
 
@@ -77,14 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
             academicQualificationsHTML += `<div class="items"><h2>${qualification.entity} - ${qualification.location}</h2>${educationsHTML}</div>`;
         });
         document.getElementById('academic_qualifications').innerHTML = academicQualificationsHTML;
-
-        // Skills
-        let skillsHTML = Object.entries(data.skills).map(([skillName, skillObject]) => `
-          <p>
-              <span class="heading3">${skillName}</span> - 
-              <span class="highlight">${skillObject.sub_skills.join(" · ").toUpperCase()}</span>
-          </p>`).join('');
-        document.getElementById('skills').innerHTML = skillsHTML;
     }
 });
 
