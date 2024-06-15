@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "sumit-sampang-rai-github-io"
+version = "0.1.0"
+description = "Resume builder"
+authors = ["Sumit Rai <4235912+sumit-sampang-rai@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "sumit_sampang_rai"}]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pyyaml = "^6.0.1"
+cssmin = "^0.2.0"
+jsmin = "^3.0.1"
+
+[tool.poetry.group.dev.dependencies]
+Jinja2 = "^3.1.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
