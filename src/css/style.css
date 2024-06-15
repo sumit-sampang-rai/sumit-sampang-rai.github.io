@@ -26,6 +26,14 @@ body {
   top: 20px;
 }
 
+.items .eye-slash-label {
+  color: grey;
+}
+
+.items .eye-slash-label:hover {
+  color: black;
+}
+
 .hidden-items {
   display: none;
 }
@@ -164,6 +172,7 @@ article h2 {
   font-weight: 1000;
   line-height: 0.5;
   margin-top: .5em;
+  display: inline;
 }
 
 article .heading3 {
@@ -236,15 +245,7 @@ article .lang-label {
     min-width: initial !important;
   }
 
-  .btn-info {
-    display: none;
-  }
-
-  .btn-eye {
-    display: none;
-  }
-
-  .btn-print {
+  .avoid-print {
     display: none;
   }
 }
