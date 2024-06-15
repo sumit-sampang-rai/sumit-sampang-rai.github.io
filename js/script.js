@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (experience.skills && experience.skills.length > 0) {
                     experiencesHTML += `<div class="highlight">${experience.skills.join(" · ").toUpperCase()}</div>`;
                 }
-                workExperiencesHTML += `<div class="items">${experiencesHTML}</div>`;
+                workExperiencesHTML += `<div class="items${experience.hidden ? ' hidden-items' : ''}">${experiencesHTML}</div>`;
             });
         });
         document.getElementById('work_experiences').innerHTML = workExperiencesHTML;

@@ -15,8 +15,19 @@ body {
 #info-button {
   z-index: 1;
   position: absolute;
+  right: 300px;
+  top: 20px;
+}
+
+#eye-button {
+  z-index: 1;
+  position: absolute;
   right: 250px;
   top: 20px;
+}
+
+.hidden-items {
+  display: none;
 }
 
 #export-button {
@@ -226,6 +237,10 @@ article .lang-label {
   }
 
   .btn-info {
+    display: none;
+  }
+
+  .btn-eye {
     display: none;
   }
 
