@@ -15,7 +15,7 @@ js_path = os.path.join(src_dir, 'js')
 css_path = os.path.join(src_dir, 'css')
 
 # Define paths
-build_path = os.path.join(root_dir, 'build')
+build_path = os.path.join(root_dir, 'docs')
 build_js_path = os.path.join(build_path, 'js')
 build_css_path = os.path.join(build_path, 'css')
 build_index_path = os.path.join(build_path, 'index.html')

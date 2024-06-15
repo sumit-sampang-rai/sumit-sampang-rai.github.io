@@ -30,18 +30,5 @@ jobs:
     - name: Run build script
       run: poetry run python src/build.py
 
-    - name: Configure Git
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-    - name: Stage build folder
-      run: git add -f build
-
-    - name: Commit build folder
-      run: |
-        git commit -m "Add build folder" --no-verify  # Use --no-verify to skip pre-commit hooks if necessary
-        git push
-
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
