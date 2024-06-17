@@ -4,7 +4,12 @@ location: "Lalitpur-14, Nepal"
 linkedin:
   text: "linkedin.com/in/sumit-sampang-rai"
   url: "https://www.linkedin.com/in/sumit-sampang-rai/"
-website: []
+website: [
+  {
+    "text": "sumit-sampang-rai.github.io",
+    "url": "https://sumit-sampang-rai.github.io/"
+  }
+]
 about: "Sumit is a Senior Data Engineer with 10 years of IT experience. He specializes solving for US Healthcare Insurance and Workforce solution challenges using his diverse skill set and expertise. He excels in building enterprise data warehouses, automating workflows, writing software & scripts, and overcoming architectural & scalability obstacles. His role as a Data, DevOps, and Software Engineer enables him to face technical hurdles and achieve business objectives with top-notch results."
 work-experiences:
   - entity: "Techkraft Inc."
@@ -14,9 +19,9 @@ work-experiences:
       - title_name: "Senior Data Engineer"
         start: "2023-01-02"
         responsibilities:
-          - "Managed a team of six highly skilled Software Engineers, providing leadership and guidance in understanding business objectives, system architectures, workflows, and technical challenges, while collaborating daily with team members in the Nepal, India and US to ensure seamless coordination across different time zones and cultural contexts."
+          - "Managed a team of six highly skilled Software Engineers, providing leadership and guidance in understanding business objectives, system architectures, workflows, and technical challenges, while collaborating daily with Nepal, India, and US team members to ensure seamless coordination across different time zones and cultural contexts."
           - "Streamlined and consolidated insurance claims data from multiple US Healthcare Insurance organizations, enhancing data usability and enabling efficient report generation."
-          - "Architected and developed automated data pipelines on the Databricks Platform using PySpark or SparkSQL for seamless extraction, loading, and transformation of data."
+          - "Architected and developed automated data pipelines on the Databricks Platform using PySpark or SparkSQL for seamless data extraction, loading, and transformation."
           - "Ensured timely delivery of project requirements and conducted thorough reviews to maintain high-quality standards."
           - "Facilitated cross-department communication and collaboration with Business Analyst (BA) and Quality Assurance (QA) teams, ensuring alignment and effective coordination throughout the project lifecycle."
           - "Mentored participants from Nepal and India in a US Healthcare Bootcamp for two months, providing guidance and expertise in healthcare data management and analytics."
