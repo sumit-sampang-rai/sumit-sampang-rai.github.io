@@ -61,9 +61,8 @@ for work in data['work-experiences']:
 
 for qualification in data['academic-qualifications']:
     for education in qualification['educations']:
-        for study in education['studies']:
-            study['start'] = format_date(study['start'])
-            study['end'] = format_date(study['end']) if study['end'] else 'Present'
+        education['start'] = format_date(education['start'])
+        education['end'] = format_date(education['end']) if education['end'] else 'Present'
 
 # Setup Jinja environment
 env = Environment(loader=FileSystemLoader(template_path))

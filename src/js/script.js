@@ -1,4 +1,40 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const initiallyHiddenItems = document.querySelectorAll('.hidden-items');
+    let hiddenItems = [];
+    initiallyHiddenItems.forEach(item => hiddenItems.push(item.id));
+
+    // Function to toggle visibility of the item
+    function toggleVisibility(itemId) {
+        const item = document.getElementById(itemId);
+        item.classList.add('hidden-items');
+        if (!hiddenItems.includes(itemId)) {
+            hiddenItems.push(itemId); // Add to hiddenItems if it wasn't hidden initially
+        }
+    }
+
+    function updateHiddenItemsList() {
+        const hiddenItemsList = document.getElementById('hidden-items-list');
+        hiddenItemsList.innerHTML = '';
+        hiddenItems.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.className = 'list-group-item d-flex justify-content-between align-items-center';
+            listItem.innerHTML = `
+                ${item.title_name}
+                <span class="eye-label avoid-print" onclick="toggleVisibility('${item.id}')">
+                    <i class="fa fa-eye"></i>
+                </span>
+            `;
+            hiddenItemsList.appendChild(listItem);
+        });
+    }
+
+    // Expose the toggleVisibility function to the global scope
+    window.toggleVisibility = toggleVisibility;
+
+    $('#visible').on('shown.bs.modal', function () {
+        updateHiddenItemsList();
+    });
+
     $(document).on("dblclick", ".editible-input", function(){
         var identifier = $(this);
         var new_identifier_id = 'new-' + this.id;

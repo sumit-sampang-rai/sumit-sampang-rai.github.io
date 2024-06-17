@@ -212,20 +212,18 @@ academic-qualifications:
   - entity: "London Metropolitan University"
     location: "London, UK"
     educations:
-      - studies:
-          - study_name: "Masters of Science in IT & Applied Security"
-            start: "2019-09-22"
-            end: "2022-06-09"
-          - study_name: "Bachelors of Science (Hons) in Computer Networking and IT Security"
-            start: "2012-02-01"
-            end: "2014-01-31"
+      - education_name: "Masters of Science in IT & Applied Security"
+        start: "2019-09-22"
+        end: "2022-06-09"
+      - education_name: "Bachelors of Science (Hons) in Computer Networking and IT Security"
+        start: "2012-02-01"
+        end: "2014-01-31"
   - entity: "Informatics Academy"
     location: "Victoria Street, Singapore"
     educations:
-      - studies:
-          - study_name: "International Diploma in Information and Communication Technology"
-            start: "2011-04-01"
-            end: "2011-12-31"
+      - education_name: "International Diploma in Information and Communication Technology"
+        start: "2011-04-01"
+        end: "2011-12-31"
 skills:
   - Python
   - DBT

@@ -175,13 +175,12 @@ article h2 {
   display: inline;
 }
 
-article .heading3 {
+article h3 {
   font-size: 1em;
   font-style: italic;
-}
-
-article .heading3 strong {
+  margin: 0px;
   font-family: 'Merriweather', serif;
+  font-weight: bold;
 }
 
 article .highlight {

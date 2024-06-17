@@ -20,10 +20,10 @@
         <button type="button" id="info-button" class="btn btn-sm btn-light avoid-print" onClick="document.getElementById('contact-info').toggleAttribute('hidden');">
             <i class="fa fa-info"></i>
         </button>
-        <button type="button" id="eye-button" class="btn btn-sm btn-light avoid-print">
+        <button type="button" id="eye-button" class="btn btn-sm btn-light avoid-print" data-bs-toggle="modal"  data-bs-target="#visible">
             <i class="fa fa-eye"></i>
         </button>
-        <button type="button" id="export-button" class="btn btn-sm btn-light avoid-print" onClick="ExportToDoc('main', '{{ data.name }}'s Resume');">
+        <button type="button" id="export-button" class="btn btn-sm btn-light avoid-print" onClick="ExportToDoc('main', '{{ data.name }}\'s Resume');">
             <i class="fa fa-file-export"></i>
             Export to Word
         </button>
@@ -31,6 +31,19 @@
             <i class="fa fa-print"></i>
             Print
         </button>
+        <div class="modal fade" id="visible" tabindex="-1" aria-labelledby="visibleLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <ul id="hidden-items-list" class="list-group"></ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <article id="main" class="two-column">
             <header class="resume__section resume__content" id="heading">
                 <div id="my_name">{{ data.name }}</div>
@@ -71,21 +84,24 @@
                         <h1 class="resume__section-title">Experience</h1>
                         <div id="work_experiences" class="resume__content">
                             {% for work in data['work-experiences'] %}
+                                {% set work_loop = loop %}
                                 {% for experience in work.experiences %}
-                                    <div class="items{% if experience.hidden %} hidden-items{% endif %}">
+                                    <div id="item-{{ work_loop.index }}-{{ loop.index }}" class="items{% if experience.hidden %} hidden-items{% endif %}">
                                         <h2>{{ work.entity }} - {{ work.location }}</h2>
-                                        <span class="eye-slash-label avoid-print"><i class="fa fa-eye-slash"></i></span>
-                                        <div class="heading3"><strong class="editible-input">{{ experience.title_name }}</strong></div>
+                                        <span class="eye-slash-label avoid-print" onclick="toggleVisibility('item-{{ work_loop.index }}-{{ loop.index }}')">
+                                            <i class="fa fa-eye-slash"></i>
+                                        </span>
+                                        <h3 class="editible-input">{{ experience.title_name }}</h3>
                                         <div class="highlight">{{ experience.start }} – {{ experience.end }}</div>
-                                        <ul>
-                                            {% for res in experience.responsibilities %}
-                                                <li>{{ res }}</li>
-                                            {% endfor %}
-                                        </ul>
-                                        {% if experience.skills %}
-                                            <div class="highlight">{{ experience.skills }}</div>
-                                        {% endif %}
-                                    </div>
+                                            <ul>
+                                                {% for res in experience.responsibilities %}
+                                                    <li>{{ res }}</li>
+                                                {% endfor %}
+                                            </ul>
+                                            {% if experience.skills %}
+                                                <div class="highlight">{{ experience.skills }}</div>
+                                            {% endif %}
+                                    </div>                                
                                 {% endfor %}
                             {% endfor %}
                         </div>
@@ -95,12 +111,10 @@
                         <div id="academic_qualifications" class="resume__content">
                             {% for qualification in data['academic-qualifications'] %}
                                 {% for education in qualification.educations %}
-                                    <div class="items">
-                                        {% for study in education.studies %}
-                                            <h2>{{ qualification.entity }} - {{ qualification.location }}</h2>
-                                            <div class="heading3"><strong>{{ study.study_name }}</strong></div>
-                                            <div class="highlight">{{ study.start }} – {{ study.end }}</div>
-                                        {% endfor %}
+                                    <div class="items{% if education.hidden %} hidden-items{% endif %}">
+                                        <h2>{{ qualification.entity }} - {{ qualification.location }}</h2>
+                                        <h3 class="editible-input">{{ education.education_name }}</h3>
+                                        <div class="highlight">{{ education.start }} – {{ education.end }}</div>
                                     </div>
                                 {% endfor %}
                             {% endfor %}
@@ -113,11 +127,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
-            integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7xBuAMRgoQl9Es=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+        integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
