@@ -5,20 +5,21 @@ linkedin:
   text: "linkedin.com/in/sumit-sampang-rai"
   url: "https://www.linkedin.com/in/sumit-sampang-rai/"
 website: []
-about: "Sumit is a Principal Software Engineer with 9 years of IT experience. He specializes solving for US Healthcare Insurance and Workforce solution challenges using his diverse skill set and expertise. He excels in building enterprise data warehouses, automating workflows, writing software & scripts, and overcoming architectural & scalability obstacles. His role as a Data, DevOps, and Software Engineer enables him to face technical hurdles and achieve business objectives with top-notch results."
+about: "Sumit is a Senior Data Engineer with 10 years of IT experience. He specializes solving for US Healthcare Insurance and Workforce solution challenges using his diverse skill set and expertise. He excels in building enterprise data warehouses, automating workflows, writing software & scripts, and overcoming architectural & scalability obstacles. His role as a Data, DevOps, and Software Engineer enables him to face technical hurdles and achieve business objectives with top-notch results."
 work-experiences:
   - entity: "Techkraft Inc."
     registrar: "Techkraft Inc. Pvt. Ltd."
     location: "Lalitpur, Nepal"
     experiences:
-      - title_name: "Principal Software Engineer"
+      - title_name: "Senior Data Engineer"
         start: "2023-01-02"
         responsibilities:
-          - "Managed a team of six highly skilled Software Engineers, providing leadership and guidance in understanding business objectives, system architectures, workflows, and technical challenges."
+          - "Managed a team of six highly skilled Software Engineers, providing leadership and guidance in understanding business objectives, system architectures, workflows, and technical challenges, while collaborating daily with team members in the Nepal, India and US to ensure seamless coordination across different time zones and cultural contexts."
           - "Streamlined and consolidated insurance claims data from multiple US Healthcare Insurance organizations, enhancing data usability and enabling efficient report generation."
           - "Architected and developed automated data pipelines on the Databricks Platform using PySpark or SparkSQL for seamless extraction, loading, and transformation of data."
           - "Ensured timely delivery of project requirements and conducted thorough reviews to maintain high-quality standards."
           - "Facilitated cross-department communication and collaboration with Business Analyst (BA) and Quality Assurance (QA) teams, ensuring alignment and effective coordination throughout the project lifecycle."
+          - "Mentored participants from Nepal and India in a US Healthcare Bootcamp for two months, providing guidance and expertise in healthcare data management and analytics."
         skills:
           - Databricks
           - Databricks Pipeline
@@ -53,6 +54,7 @@ work-experiences:
         start: "2020-12-01"
         end: "2022-09-30"
         responsibilities:
+          - "Collaborated with teams in Nepal, Kenya, and the UK to achieve data team goals and make ourselves successful."
           - "Successfully migrated data pipelines from Xplenty to Prefect orchestration, improving cost-effectiveness."
           - "Developed Python and Pandas pipelines for fetching and ingesting data from clients' REST APIs."
           - "Provided crucial support to the data team, overseeing technical operations of the enterprise data warehouse. Facilitated cross-departmental understanding of business operations, processes, and data origins."
