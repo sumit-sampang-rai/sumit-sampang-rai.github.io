@@ -87,12 +87,12 @@
                                 {% set work_loop = loop %}
                                 {% for experience in work.experiences %}
                                     <div id="item-{{ work_loop.index }}-{{ loop.index }}" class="items{% if experience.hidden %} hidden-items{% endif %}">
-                                        <h2>{{ work.entity }} - {{ work.location }}</h2>
+                                        <h2>{{ work.entity }}, {{ work.location }}</h2>
                                         <span class="eye-slash-label avoid-print" onclick="toggleVisibility('item-{{ work_loop.index }}-{{ loop.index }}')">
                                             <i class="fa fa-eye-slash"></i>
                                         </span>
                                         <h3 class="editible-input">{{ experience.title_name }}</h3>
-                                        <div class="highlight">{{ experience.start }} – {{ experience.end }}</div>
+                                        <div class="highlight">{{ experience.start }} - {{ experience.end }}</div>
                                             <ul>
                                                 {% for res in experience.responsibilities %}
                                                     <li>{{ res }}</li>
@@ -112,7 +112,7 @@
                             {% for qualification in data['academic-qualifications'] %}
                                 {% for education in qualification.educations %}
                                     <div class="items{% if education.hidden %} hidden-items{% endif %}">
-                                        <h2>{{ qualification.entity }} - {{ qualification.location }}</h2>
+                                        <h2>{{ qualification.entity }}, {{ qualification.location }}</h2>
                                         <h3 class="editible-input">{{ education.education_name }}</h3>
                                         <div class="highlight">{{ education.start }} – {{ education.end }}</div>
                                     </div>
