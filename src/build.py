@@ -53,16 +53,16 @@ def format_date(date_str):
     date = datetime.strptime(date_str, '%Y-%m-%d')
     return date.strftime('%b %Y')
 
-for work in data['work-experiences']:
-    for experience in work['experiences']:
-        experience['start'] = format_date(experience['start'])
-        experience['end'] = format_date(experience['end']) if 'end' in experience else 'Present'
-        experience['skills'] = " · ".join(experience['skills']).upper() if experience['skills'] else ""
+for experience in data['experiences']:
+    for instance in experience['experiences']:
+        instance['start'] = format_date(instance['start'])
+        instance['end'] = format_date(instance['end']) if 'end' in instance else 'Present'
+        instance['skills'] = " · ".join(instance['skills']).upper() if instance['skills'] else ""
 
-for qualification in data['academic-qualifications']:
-    for education in qualification['educations']:
-        education['start'] = format_date(education['start'])
-        education['end'] = format_date(education['end']) if education['end'] else 'Present'
+for education in data['educations']:
+    for instance in education['educations']:
+        instance['start'] = format_date(instance['start'])
+        instance['end'] = format_date(instance['end']) if instance['end'] else 'Present'
 
 # Setup Jinja environment
 env = Environment(loader=FileSystemLoader(template_path))

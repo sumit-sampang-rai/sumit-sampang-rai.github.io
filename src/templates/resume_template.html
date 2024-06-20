@@ -34,12 +34,35 @@
         <div class="modal fade" id="visible" tabindex="-1" aria-labelledby="visibleLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable">
                 <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Hidden Experiences and Educations</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
                     <div class="modal-body">
-                        <ul id="hidden-items-list" class="list-group"></ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <ul id="hidden-items-list" class="list-group list-group-flush">
+                            {% for experience in data['experiences'] %}
+                                {% set experience_loop = loop %}
+                                {% for instance in experience.experiences %}
+                                    <li id="experience-{{experience_loop.index }}-{{ loop.index }}-hidden" class="list-group-item d-flex justify-content-between {% if not instance.hidden %} hidden-items{% endif %}">
+                                        {{ experience.entity }} - {{ instance.title_name }}
+                                        <span class="eye-label avoid-print" onclick="toggleItemVisibility('experience-{{ experience_loop.index }}-{{ loop.index }}-hidden')">
+                                            <i class="fa fa-eye"></i>
+                                        </span>
+                                    </li>
+                                {% endfor %}
+                            {% endfor %}
+                            {% for education in data['educations'] %}
+                                {% set education_loop = loop %}
+                                {% for instance in education.educations %}
+                                    <li id="education-{{ education_loop.index }}-{{ loop.index }}-hidden" class="list-group-item d-flex justify-content-between {% if not instance.hidden %} hidden-items{% endif %}">
+                                        {{ education.entity }} - {{ instance.course_name }}
+                                        <span class="eye-label avoid-print" onclick="toggleItemVisibility('education-{{ education_loop.index }}-{{ loop.index }}-hidden')">
+                                            <i class="fa fa-eye"></i>
+                                        </span>
+                                    </li>
+                                {% endfor %}
+                            {% endfor %}
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -83,23 +106,23 @@
                     <section class="resume__section resume__experience">
                         <h1 class="resume__section-title">Experience</h1>
                         <div id="work_experiences" class="resume__content">
-                            {% for work in data['work-experiences'] %}
-                                {% set work_loop = loop %}
-                                {% for experience in work.experiences %}
-                                    <div id="item-{{ work_loop.index }}-{{ loop.index }}" class="items{% if experience.hidden %} hidden-items{% endif %}">
-                                        <h2>{{ work.entity }}, {{ work.location }}</h2>
-                                        <span class="eye-slash-label avoid-print" onclick="toggleVisibility('item-{{ work_loop.index }}-{{ loop.index }}')">
+                            {% for experience in data['experiences'] %}
+                                {% set experience_loop = loop %}
+                                {% for instance in experience.experiences %}
+                                    <div id="experience-{{ experience_loop.index }}-{{ loop.index }}" class="items{% if instance.hidden %} hidden-items{% endif %}">
+                                        <h2>{{ experience.entity }}, {{ experience.location }}</h2>
+                                        <span class="eye-slash-label avoid-print" onclick="toggleItemVisibility('experience-{{ experience_loop.index }}-{{ loop.index }}')">
                                             <i class="fa fa-eye-slash"></i>
                                         </span>
-                                        <h3 class="editible-input">{{ experience.title_name }}</h3>
-                                        <div class="highlight">{{ experience.start }} - {{ experience.end }}</div>
+                                        <h3 class="editible-input">{{ instance.title_name }}</h3>
+                                        <div class="highlight">{{ instance.start }} - {{ instance.end }}</div>
                                             <ul>
-                                                {% for res in experience.responsibilities %}
+                                                {% for res in instance.responsibilities %}
                                                     <li>{{ res }}</li>
                                                 {% endfor %}
                                             </ul>
-                                            {% if experience.skills %}
-                                                <div class="highlight">{{ experience.skills }}</div>
+                                            {% if instance.skills %}
+                                                <div class="highlight">{{ instance.skills }}</div>
                                             {% endif %}
                                     </div>                                
                                 {% endfor %}
@@ -109,12 +132,16 @@
                     <section class="resume__section resume__qualification">
                         <h1 class="resume__section-title">Education</h1>
                         <div id="academic_qualifications" class="resume__content">
-                            {% for qualification in data['academic-qualifications'] %}
-                                {% for education in qualification.educations %}
-                                    <div class="items{% if education.hidden %} hidden-items{% endif %}">
-                                        <h2>{{ qualification.entity }}, {{ qualification.location }}</h2>
-                                        <h3 class="editible-input">{{ education.education_name }}</h3>
-                                        <div class="highlight">{{ education.start }} – {{ education.end }}</div>
+                            {% for education in data['educations'] %}
+                                {% set education_loop = loop %}
+                                {% for instance in education.educations %}
+                                    <div id="education-{{ education_loop.index }}-{{ loop.index }}" class="items{% if instance.hidden %} hidden-items{% endif %}">
+                                        <h2>{{ education.entity }}, {{ education.location }}</h2>
+                                        <span class="eye-slash-label avoid-print" onclick="toggleItemVisibility('education-{{ education_loop.index }}-{{ loop.index }}')">
+                                            <i class="fa fa-eye-slash"></i>
+                                        </span>
+                                        <h3 class="editible-input">{{ instance.course_name }}</h3>
+                                        <div class="highlight">{{ instance.start }} – {{ instance.end }}</div>
                                     </div>
                                 {% endfor %}
                             {% endfor %}
