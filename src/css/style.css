@@ -1,5 +1,10 @@
+@page :first {
+  margin-top: 0;
+}
+
 @page {
   size: A4;
+  margin: 1in 0in 0.5in 0in;
 }
 
 body {
