@@ -120,14 +120,6 @@ experiences:
           - JIRA
           - Scrum
           - Kanban
-      - title_name: "Intern"
-        hidden: true
-        start: "2020-12-01"
-        end: "2022-09-30"
-        responsibilities:
-          - "Anomaly detection using ELB logs."
-        skills:
-          - AWS Athena
       - title_name: "Software Engineer, DevOps"
         start: "2018-10-01"
         end: "2020-11-30"
