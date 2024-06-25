@@ -235,7 +235,7 @@ educations:
         end: "2022-06-09"
       - course_name: "Bachelors of Science (Hons) in Computer Networking and IT Security"
         start: "2012-02-01"
-        end: "2014-01-31"
+        end: "2014-11-06"
   - entity: "Informatics Academy"
     location: "Victoria Street, Singapore"
     educations:
