@@ -12,7 +12,7 @@ python = "^3.11"
 
 [tool.poetry.group.dev.dependencies]
 pyyaml = "^6.0.1"
-Jinja2 = "^3.1.4"
+Jinja2 = "^3.1.5"
 cssmin = "^0.2.0"
 jsmin = "^3.0.1"
 watchdog = "^4.0.1"
