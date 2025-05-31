@@ -62,7 +62,7 @@ for experience in data['experiences']:
 for education in data['educations']:
     for instance in education['educations']:
         instance['start'] = format_date(instance['start'])
-        instance['end'] = format_date(instance['end']) if instance['end'] else 'Present'
+        instance['end'] = format_date(instance['end']) if 'end' in instance else 'Present'
 
 # Setup Jinja environment
 env = Environment(loader=FileSystemLoader(template_path))
