@@ -44,17 +44,6 @@
                                     </li>
                                 {% endfor %}
                             {% endfor %}
-                            {% for education in data['educations'] %}
-                                {% set education_loop = loop %}
-                                {% for instance in education.educations %}
-                                    <li id="education-{{ education_loop.index }}-{{ loop.index }}-hidden" class="list-group-item d-flex justify-content-between {% if not instance.hidden %} hidden-items{% endif %}">
-                                        {{ education.entity }} - {{ instance.course_name }}
-                                        <span class="eye-label avoid-print" onclick="toggleItemVisibility('education-{{ education_loop.index }}-{{ loop.index }}-hidden')">
-                                            <i class="fa fa-eye"></i>
-                                        </span>
-                                    </li>
-                                {% endfor %}
-                            {% endfor %}
                         </ul>
                     </div>
                 </div>
