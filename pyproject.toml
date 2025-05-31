@@ -17,6 +17,10 @@ cssmin = "^0.2.0"
 jsmin = "^3.0.1"
 watchdog = "^4.0.1"
 
+[tool.poetry.group.lint.dependencies]
+flake8 = "^7.2.0"
+black = "^25.1.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
