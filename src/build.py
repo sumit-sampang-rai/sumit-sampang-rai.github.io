@@ -58,6 +58,7 @@ with open(data_path, "r") as file:
 # Processing the data
 today_date = datetime.today()
 
+
 for experience in data["experiences"]:
     for instance in experience["experiences"]:
         instance["start"] = format_date(instance["start"])
