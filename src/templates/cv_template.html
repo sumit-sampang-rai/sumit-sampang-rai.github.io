@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Resume - {{ data.name }}</title>
+    <title>CV - {{ data.name }}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" crossorigin="anonymous">
@@ -16,7 +16,7 @@
         <button type="button" id="eye-button" class="btn btn-sm btn-light avoid-print" data-bs-toggle="modal"  data-bs-target="#visible">
             <i class="fa fa-eye"></i>
         </button>
-        <button type="button" id="export-button" class="btn btn-sm btn-light avoid-print" onClick="ExportToDoc('main', '{{ data.name }}\'s Resume');">
+        <button type="button" id="export-button" class="btn btn-sm btn-light avoid-print" onClick="ExportToDoc('main', 'CV - {{ data.name }}');">
             <i class="fa fa-file-export"></i>
             Export to Word
         </button>
@@ -50,7 +50,7 @@
             </div>
         </div>
         <article id="main" class="two-column">
-            <header class="resume__section resume__content" id="heading">
+            <header class="cv__section cv__content" id="heading">
                 <div id="my_name">{{ data.name }}</div>
                 <div class="info-item">
                     <span class="info-label"><i class="fa fa-location-arrow"></i></span>
@@ -73,21 +73,21 @@
                     <span id="info-phone" class="editible-input info-text">+977-98</span>
                 </div>
             </header>
-            <section class="resume__columns">
-                <div class="resume__main">
-                    <section class="resume__section resume__summary">
-                        <h1 class="resume__section-title">Professional Summary</h1>
+            <section class="cv__columns">
+                <div class="cv__main">
+                    <section class="cv__section cv__summary">
+                        <h1 class="cv__section-title">Professional Summary</h1>
                         <p id="about-me" class="about-me editible-textarea">{{ data.about }}</p>
                     </section>
-                    <section class="resume__section resume__skills">
-                        <h1 class="resume__section-title">Skills</h1>
-                        <div id="skills" class="resume__text">
+                    <section class="cv__section cv__skills">
+                        <h1 class="cv__section-title">Skills</h1>
+                        <div id="skills" class="cv__text">
                             <span class="highlight">{{ data.skills | join(" · ") | upper }}</span>
                         </div>
                     </section>
-                    <section class="resume__section resume__experience">
-                        <h1 class="resume__section-title">Experience</h1>
-                        <div id="work_experiences" class="resume__content">
+                    <section class="cv__section cv__experience">
+                        <h1 class="cv__section-title">Experience</h1>
+                        <div id="work_experiences" class="cv__content">
                             {% for experience in data['experiences'] %}
                                 {% set experience_loop = loop %}
                                 {% for instance in experience.experiences %}
@@ -111,9 +111,9 @@
                             {% endfor %}
                         </div>
                     </section>
-                    <section class="resume__section resume__qualification">
-                        <h1 class="resume__section-title">Education</h1>
-                        <div id="academic_qualifications" class="resume__content">
+                    <section class="cv__section cv__qualification">
+                        <h1 class="cv__section-title">Education</h1>
+                        <div id="academic_qualifications" class="cv__content">
                             {% for education in data['educations'] %}
                                 {% set education_loop = loop %}
                                 {% for instance in education.educations %}

@@ -81,7 +81,7 @@ article ul {
 }
 
 article header,
-article .resume__section {
+article .cv__section {
   font-family: Arial, sans-serif;
 }
 
@@ -89,7 +89,7 @@ article header {
   padding: 4em 4em 0;
 }
 
-article .resume__section-title>i {
+article .cv__section-title>i {
   margin-right: 0.63em;
   font-size: 1.14em;
   background-color: #5695cd;
@@ -104,17 +104,17 @@ article .resume__section-title>i {
   line-height: 1.6;
 }
 
-article .resume__content .items {
+article .cv__content .items {
   margin-bottom: 1em;
 }
 
-article .resume__columns {
+article .cv__columns {
   overflow: hidden;
   padding: 4em;
   padding-top: 0;
 }
 
-article .resume__main {
+article .cv__main {
   float: left;
   text-align: justify;
 }

@@ -66,7 +66,7 @@ for education in data['educations']:
 
 # Setup Jinja environment
 env = Environment(loader=FileSystemLoader(template_path))
-template = env.get_template('resume_template.html')
+template = env.get_template('cv_template.html')
 
 # Render the template
 output = template.render(data=data)
@@ -75,4 +75,4 @@ output = template.render(data=data)
 with open(build_index_path, 'w') as file:
     file.write(output)
 
-print(f"Resume generated at {build_index_path}")
+print(f"CV generated at {build_index_path}")

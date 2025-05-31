@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "sumit-sampang-rai-github-io"
 version = "0.1.0"
-description = "Resume builder"
+description = "CV builder"
 authors = ["Sumit Rai <4235912+sumit-sampang-rai@users.noreply.github.com>"]
 readme = "README.md"
 packages = [{include = "sumit_sampang_rai"}]
