@@ -33,12 +33,26 @@
                       </div>
                     <div class="modal-body">
                         <ul id="hidden-items-list" class="list-group list-group-flush">
+                            <b class="modal-title">Experiences</b>
                             {% for experience in data['experiences'] %}
                                 {% set experience_loop = loop %}
                                 {% for instance in experience.experiences %}
                                     <li id="experience-{{experience_loop.index }}-{{ loop.index }}-hidden" class="list-group-item d-flex justify-content-between {% if not instance.hidden %} hidden-items{% endif %}">
                                         {{ experience.entity }} - {{ instance.title_name }}
                                         <span class="eye-label avoid-print" onclick="toggleItemVisibility('experience-{{ experience_loop.index }}-{{ loop.index }}-hidden')">
+                                            <i class="fa fa-eye"></i>
+                                        </span>
+                                    </li>
+                                {% endfor %}
+                            {% endfor %}
+
+                            <b class="modal-title">Educations</b>
+                            {% for education in data['educations'] %}
+                                {% set education_loop = loop %}
+                                {% for instance in education.educations %}
+                                    <li id="education-{{education_loop.index }}-{{ loop.index }}-hidden" class="list-group-item d-flex justify-content-between {% if not instance.hidden %} hidden-items{% endif %}">
+                                        {{ education.entity }} - {{ instance.course_name }}
+                                        <span class="eye-label avoid-print" onclick="toggleItemVisibility('education-{{ education_loop.index }}-{{ loop.index }}-hidden')">
                                             <i class="fa fa-eye"></i>
                                         </span>
                                     </li>
