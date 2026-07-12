@@ -10,16 +10,52 @@ website: [
     "url": "https://sumit-sampang-rai.github.io/"
   }
 ]
-about: "Sumit is a Senior Data Engineer with 11 years of IT experience. He specializes solving for US Healthcare Insurance and Workforce solution challenges using his diverse skill set and expertise. He excels in building enterprise data warehouses, augmenting it's data quality, automating workflows, writing software & scripts, and overcoming architectural & scalability obstacles. His role as a Data, DevOps, and Software Engineer enables him to face technical hurdles and achieve business objectives with top-notch results."
+about: "I am a Senior Software Engineer with over 10+ years of experience designing and delivering scalable software and data solutions. Throughout my career, I have worked extensively on projects in the US healthcare insurance and workforce management domains. My expertise includes building enterprise data platforms and data warehouses, improving data quality, automating workflows, and developing software solutions that solve complex business challenges. With a multidisciplinary background in software engineering, data engineering, and DevOps, I design reliable, scalable architectures and implement efficient, maintainable solutions that align technical execution with business objectives. I am passionate about solving complex technical problems, optimizing systems, and delivering high-quality software that creates measurable business value."
 experiences:
-  - entity: "Techkraft Inc."
-    registrar: "Techkraft Inc. Pvt. Ltd."
+  - entity: "Abacus Insights Pvt. Ltd."
+    registrar: "Abacus Insights Pvt. Ltd."
     location: "Lalitpur, Nepal"
     experiences:
-      - title_name: "Senior Data Engineer"
-        start: "2023-01-02"
+      - title_name: "Senior Software Engineer"
+        start: "2025-07-01"
         responsibilities:
-          - "Architected and developed the data quality solution for the data reconciliation and data quality rules. Architected data quality solution for the data spike and data drift. These products built the confidence on the data in every ingestion by automatically monitoring."
+          - "Designed and developed productized data quality solutions to improve the accuracy, consistency, and reliability of enterprise data across large-scale data platforms."
+          - "Built scalable record reconciliation frameworks to identify, match, and resolve inconsistencies between multiple data sources."
+          - "Developed a configurable data quality framework on Databricks, enabling reusable validation rules and automated quality checks across data pipelines."
+          - "Collaborated with product managers, data engineers, and software engineers to deliver scalable, high-quality data products aligned with business requirements."
+          - "Optimized Spark and Databricks workloads while following software engineering best practices, including code reviews, testing, and CI/CD automation."
+        skills:
+          - Data Quality
+          - Databricks
+          - Databricks Pipeline
+          - SnowFlake
+          - PySpark
+          - Spark SQL
+          - Python
+          - Data Engineering
+          - Data Warehousing
+          - Docker
+          - Containerization
+          - ETL / ELT
+          - Terraform
+          - Amazon Web Services
+          - AWS S3
+          - OLAP / OLTP
+          - GitLab
+          - Excel
+          - JSON / YAML
+          - Parquet
+          - REST APIs
+          - JIRA
+          - Scrum
+  - entity: "Techkraft Inc."
+    registrar: "Techkraft Inc."
+    location: "Lalitpur, Nepal"
+    experiences:
+      - title_name: "Senior Software Engineer"
+        start: "2023-01-02"
+        end: "2025-07-01"
+        responsibilities:
           - "Managed a team of six highly skilled Software Engineers, providing leadership and guidance in understanding business objectives, system architectures, workflows, and technical challenges, while collaborating daily with Nepal, India, and US team members to ensure seamless coordination across different time zones and cultural contexts."
           - "Streamlined and consolidated insurance claims data from multiple US Healthcare Insurance organizations, enhancing data usability and enabling efficient report generation."
           - "Architected and developed automated data pipelines on the Databricks Platform using PySpark or SparkSQL for seamless data extraction, loading, and transformation."
@@ -27,7 +63,6 @@ experiences:
           - "Facilitated cross-department communication and collaboration with Business Analyst (BA) and Quality Assurance (QA) teams, ensuring alignment and effective coordination throughout the project lifecycle."
           - "Mentored participants from Nepal and India in a US Healthcare Bootcamp for two months, providing guidance and expertise in healthcare data management and analytics."
         skills:
-          - Data Quality
           - Databricks
           - Databricks Pipeline
           - SnowFlake
